@@ -1,12 +1,15 @@
 <app-card>
     <article id="container-login">
-        <section class="conteudo-login">
-            <form action="">
-                <legend>Login</legend>
-                <input type="text" placeholder="Nickname" class="dados-input">
-                <input type="password" placeholder="Password" class="dados-input"> 
+        <section class="conteudo-login" >
+            <form id="" [formGroup]="loginForm" (ngSubmit)="onSubmit()">
 
-                <img  class="icon" [src]="'../../../assets/img/icon/visibility.svg'" alt="Olho Visivél">
+                <legend>Login</legend>
+                <input type="text" placeholder="Nickname" formControlName="nickname" class="dados-input">
+                <input type="password" placeholder="Password" [type]="hide ? 'password' : 'text'" formControlName="password" class="dados-input"> 
+
+                <span class="material-icons" Id="icon" (click)="hide = !hide">
+                    {{hide ? 'visibility' : 'visibility_off'}}
+                    </span>
 
                 <button type="submit">Enter</button>
 

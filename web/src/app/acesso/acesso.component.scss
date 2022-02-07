@@ -5,7 +5,7 @@ legend{
     margin:10px 0 35px 0;
 }
 
-legend, a, button{
+legend, a, button, input{
     color: var(--font-text-white);
 }
 
@@ -15,6 +15,7 @@ legend, a, button{
     align-items: center;
 
     margin: 15px auto;
+    padding: 15px;
 
     width: 14.7rem;
     height: 2.5rem;
@@ -28,7 +29,6 @@ legend, a, button{
 input::placeholder, a {
     font: 300 0.6rem 'Inter';
 
-    padding: 10px;
     color: var(--font-text-white);
 }
 
@@ -42,6 +42,8 @@ button{
     height: 2rem;
 
     margin: 30px 4rem;
+
+    cursor: pointer;
 }
 
 a{

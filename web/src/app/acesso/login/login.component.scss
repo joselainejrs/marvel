@@ -6,8 +6,12 @@
     margin: auto;
 }
 
-#container-login .conteudo-login form .icon {
+#container-login .conteudo-login form #icon {
     position: relative;
     bottom: 2.5rem;
     left: 14.3rem;
+
+    color: var(--card-icon);
+
+    cursor: pointer;
 }

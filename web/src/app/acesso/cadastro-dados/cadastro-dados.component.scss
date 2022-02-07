@@ -1,0 +1,17 @@
+#container-cds-dados .conteudo-cds-dados {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    margin: auto;
+}
+
+#container-cds-dados .conteudo-cds-dados form #icon {
+    position: relative;
+    bottom: 2.5rem;
+    left: 14.3rem;
+
+    color: var(--card-icon);
+
+    cursor: pointer;
+}

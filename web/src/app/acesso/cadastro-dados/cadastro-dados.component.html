@@ -1,13 +1,24 @@
 <app-card>
-    <article id="container-login">
-        <section class="conteudo-login">
-            <form action="">
-                <legend>Login</legend>
-                <input type="text" placeholder="Nickname" class="dados-input">
-                <input type="password" placeholder="Password" class="dados-input">
-                <button type="submit">Enter</button>
+    <article id="container-cds-dados">
+        <section class="conteudo-cds-dados" >
+            <form id="" [formGroup]="cdsDadosForm" (ngSubmit)="onSubmit()">
 
-                <a [routerLink]="['/cdsDados']">Register ></a>
+                <legend>Account Data</legend>
+                <input type="text" placeholder="Nickname" formControlName="nickName" class="dados-input">
+                <input type="text" placeholder="First Name" formControlName="firstName" class="dados-input">
+                <input type="text" placeholder="Last Name" formControlName="lastNme" class="dados-input">
+                <input type="text" placeholder="E-Mail" formControlName="email" class="dados-input">
+                <input type="text" placeholder="Contact" formControlName="Contact" class="dados-input">
+                <input type="password" placeholder="Password" [type]="hide ? 'password' : 'text'" formControlName="password" class="dados-input"> 
+
+                <span class="material-icons" Id="icon" (click)="hide = !hide">
+                    {{hide ? 'visibility' : 'visibility_off'}}
+                    </span>
+
+                <button type="submit">Continue</button>
+
+                <a [routerLink]="['/login']">Login ></a>
+
             </form>
         </section>
     </article>
