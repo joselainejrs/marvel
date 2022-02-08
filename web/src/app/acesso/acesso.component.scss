@@ -9,7 +9,7 @@ legend, a, button, input{
     color: var(--font-text-white);
 }
 
-#container-login .conteudo-login form .dados-input{
+form .dados-input{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -32,8 +32,8 @@ input::placeholder, a {
     color: var(--font-text-white);
 }
 
-button{
-    background-color: var(--card-button);
+.btn{
+    // background-color: #000;
 
     border-radius: 5px;
     border: 1px solid var(--card-button);

@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, Validators } from '@angular/forms';
+import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-cadastro-dados',
@@ -13,21 +13,39 @@ export class CadastroDadosComponent implements OnInit {
 
   hide = true;
 
-  cdsDadosForm = this.formBuilder.group({
-    nickName: [null, Validators.required],
-    firstName: [null, Validators.required],
-    lastName: [null, Validators.required],
-    email: [null, Validators.required],
-    contact: [null, Validators.required],
-    password: [null, Validators.required],
-  });
-
   constructor(
     private formBuilder: FormBuilder,
   ) { }
 
+    dadosForm = this.formBuilder.group({
+    nickName: ['', Validators.required],
+    firstName: ['', Validators.required],
+    lastName: ['', Validators.required],
+    email: ['', Validators.required],
+    contact: [null, Validators.required],
+    password: ['', Validators.required],
+  });
+
+
   ngOnInit(): void {
+
   }
 
-  onSubmit(){}
+
+  //Criando uma validação dos input com classe e su
+  // validInput(input : FormControl){
+  //   return input.value ? null : {obrigatorio : true}
+  // }
+
+  onSubmit() { }
+
+  btnContinue() {
+    console.log("oie")
+  }
+
+  // verifica(campo){
+  //   // return !campo.valid && campo.touched;
+  //   return !this.cdsDadosForm.get(campo)?.valid && this.cdsDadosForm.get(campo)?.touched
+  // }
+
 }

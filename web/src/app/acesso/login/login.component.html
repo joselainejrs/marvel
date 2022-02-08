@@ -11,7 +11,7 @@
                     {{hide ? 'visibility' : 'visibility_off'}}
                     </span>
 
-                <button type="submit">Enter</button>
+                <button type="submit" [disabled]="!loginForm.valid">Enter</button>
 
                 <a [routerLink]="['/cdsDados']">Register ></a>
             </form>
