@@ -1,15 +1,18 @@
-legend{
-    font: 400 1.1rem 'Roboto Condensed';
+legend {
+    font: 400 1.1rem "Roboto Condensed";
     text-align: center;
 
-    margin:10px 0 35px 0;
+    margin: 10px 0 35px 0;
 }
 
-legend, a, button, input{
+legend,
+a,
+button,
+input {
     color: var(--font-text-white);
 }
 
-form .dados-input{
+form .dados-input {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -26,17 +29,15 @@ form .dados-input{
     background-color: var(--card-backgroud);
 }
 
-input::placeholder, a {
-    font: 300 0.6rem 'Inter';
+input::placeholder,
+a {
+    font: 300 0.6rem "Inter";
 
     color: var(--font-text-white);
 }
 
-.btn{
-    // background-color: #000;
-
+.btn {
     border-radius: 5px;
-    border: 1px solid var(--card-button);
 
     width: 10rem;
     height: 2rem;
@@ -46,7 +47,21 @@ input::placeholder, a {
     cursor: pointer;
 }
 
-a{
+// .btn:active{
+// background-color: var(--card-button);
+
+// }
+
+.getColor {
+    background-color: var(--card-button);
+    border: 1px solid var(--card-button);
+}
+
+.fillField {
+    border: 1px solid var(--card-button);
+}
+
+a {
     margin-right: 2rem;
     text-decoration: none;
 

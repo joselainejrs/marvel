@@ -40,10 +40,9 @@
                     {{hide ? 'visibility' : 'visibility_off'}}
                     </span>
 
-                    <p>Form Status: {{ dadosForm.status }}</p>
+                <button type="submit" [disabled]="!dadosForm.valid" (click)="btnContinue()" class="btn" [ngClass]="{ 'getColor' : dadosForm.valid }" >Continue</button>
 
-                <button type="submit" [disabled]="!dadosForm.valid" (click)="btnContinue()" class="btn">Continue</button>
-
+    
                 <a [routerLink]="['/login']">Login ></a>
 
             </form>

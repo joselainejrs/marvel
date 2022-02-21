@@ -12,7 +12,8 @@ import { FormBuilder, Validators } from '@angular/forms';
 export class LoginComponent implements OnInit {
 
   hide = true;
-
+  color = 'red'
+  
   loginForm = this.formBuilder.group({
     nickname: [null, Validators.required],
     password: [null, Validators.required],
@@ -28,5 +29,12 @@ export class LoginComponent implements OnInit {
   onSubmit() {
     // TODO: Use EventEmitter with form value
     console.warn(this.loginForm.value);
+  }
+
+  fillField() {
+    // if(this.loginForm.invalid){
+    //   // return 'red'
+    //   console.log('oi1')
+    //  }
   }
 }

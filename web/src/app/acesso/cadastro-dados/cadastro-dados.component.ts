@@ -12,12 +12,13 @@ import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms'
 export class CadastroDadosComponent implements OnInit {
 
   hide = true;
+  // getColor: Boolean = false;
 
   constructor(
     private formBuilder: FormBuilder,
   ) { }
 
-    dadosForm = this.formBuilder.group({
+  dadosForm = this.formBuilder.group({
     nickName: ['', Validators.required],
     firstName: ['', Validators.required],
     lastName: ['', Validators.required],
@@ -40,7 +41,12 @@ export class CadastroDadosComponent implements OnInit {
   onSubmit() { }
 
   btnContinue() {
-    console.log("oie")
+    // getColor
+    console.log('oi')
+    // if (this.dadosForm.valid) {
+    //   // return !this.getColor;
+    //   console.log(!this.getColor)
+    // }
   }
 
   // verifica(campo){
@@ -48,4 +54,9 @@ export class CadastroDadosComponent implements OnInit {
   //   return !this.cdsDadosForm.get(campo)?.valid && this.cdsDadosForm.get(campo)?.touched
   // }
 
+  // getColor(){
+  //   if(this.dadosForm.valid){
+  //     return '#ED1D24';
+  //   }
+  // }
 }
