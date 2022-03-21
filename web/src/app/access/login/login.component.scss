@@ -1,0 +1,22 @@
+#container-login .conteudo-login {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    margin: auto;
+}
+
+.alert {
+    margin-left: 1.8rem;
+}
+
+small {
+    position: relative;
+    margin-left: 0.3rem;
+    top: -0.8rem;
+    color: #ed1d24;
+}
+
+.is-invalid{
+    color: #ed1d24;
+}

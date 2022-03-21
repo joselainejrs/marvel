@@ -1,0 +1,59 @@
+<app-card>
+    <article id="container-rgt-address">
+        <section class="conteudo-rgt-address" >
+            <form id="" [formGroup]="registerAddressForm" (ngSubmit)="onSubmit()">
+
+                <legend>Address Data</legend>
+                <input 
+                    type="text" 
+                    placeholder="CEP" 
+                    formControlName="cep" 
+                    class="dados-input">
+
+                <div class="input-together-data">
+                    <input 
+                        type="text" 
+                        placeholder="Address" 
+                        formControlName="address" 
+                        class="dados-input input-address">
+                    <input 
+                        type="text" 
+                        placeholder="No." 
+                        formControlName="no" 
+                        class="dados-input input-number">
+                </div>
+                <input 
+                    type="text" 
+                    placeholder="Complement" 
+                    formControlName="complement" 
+                    class="dados-input">
+
+                <div class="input-together-data">
+                    <input 
+                        type="text" 
+                        placeholder="District" 
+                        formControlName="district" 
+                        class="dados-input input-together">
+                    <input 
+                        type="text" 
+                        placeholder="City" 
+                        formControlName="city" 
+                        class="dados-input input-together">
+                </div>
+  
+                <button 
+                    type="submit" 
+                    [disabled]="!registerAddressForm.valid" 
+                    (click)="btnContinue()" 
+                    class="btn" 
+                    [ngClass]="{ 'getColor' : registerAddressForm.valid }" 
+                    >
+                    Finish
+                </button>
+
+                <a [routerLink]="['/login']">Login ></a>
+
+            </form>
+        </section>
+    </article>
+</app-card>

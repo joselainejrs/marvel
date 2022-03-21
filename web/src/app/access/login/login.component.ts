@@ -6,35 +6,30 @@ import { FormBuilder, Validators } from '@angular/forms';
   templateUrl: './login.component.html',
   styleUrls: [
     './login.component.scss',
-    '../acesso.component.scss'
+    '../access.component.scss'
   ]
 })
 export class LoginComponent implements OnInit {
 
   hide = true;
-  color = 'red'
   
   loginForm = this.formBuilder.group({
-    nickname: [null, Validators.required],
-    password: [null, Validators.required],
+    nickname: ['', Validators.required],
+    password: ['', Validators.required],
   });
 
   constructor(
     private formBuilder: FormBuilder,
   ) { }
 
-  ngOnInit(): void {
-  }
+  ngOnInit(): void { }
 
-  onSubmit() {
-    // TODO: Use EventEmitter with form value
-    console.warn(this.loginForm.value);
-  }
+  onSubmit() { }
 
-  fillField() {
-    // if(this.loginForm.invalid){
-    //   // return 'red'
-    //   console.log('oi1')
-    //  }
-  }
+  btnLogin() { }
+
+   // get e() { return this.loginForm.controls['nickname'].value }
+
+  get nickname() { return this.loginForm.get('nickname'); }
+
 }

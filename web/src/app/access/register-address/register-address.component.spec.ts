@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { CadastroDadosComponent } from './cadastro-dados.component';
+import { RegisterAddressComponent } from './register-address.component';
 
-describe('CadastroDadosComponent', () => {
-  let component: CadastroDadosComponent;
-  let fixture: ComponentFixture<CadastroDadosComponent>;
+describe('RegisterAddressComponent', () => {
+  let component: RegisterAddressComponent;
+  let fixture: ComponentFixture<RegisterAddressComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ CadastroDadosComponent ]
+      declarations: [ RegisterAddressComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(CadastroDadosComponent);
+    fixture = TestBed.createComponent(RegisterAddressComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

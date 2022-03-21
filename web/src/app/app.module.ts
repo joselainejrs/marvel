@@ -3,7 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { AcessoModule } from './acesso/acesso.module';
+import { AccessModule } from './access/access.module';
 
 @NgModule({
   declarations: [
@@ -12,7 +12,7 @@ import { AcessoModule } from './acesso/acesso.module';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    AcessoModule
+    AccessModule
   ],
   providers: [],
   bootstrap: [AppComponent]

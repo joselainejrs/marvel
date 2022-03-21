@@ -1,0 +1,50 @@
+<app-card>
+    <article id="container-login">
+        <section class="conteudo-login">
+            <form id="" [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+
+                <legend>Login</legend>
+                <div>
+                    <input 
+                        type="text" 
+                        placeholder="Nickname" 
+                        formControlName="nickname" 
+                        name="nickname" 
+                        class="dados-input"
+                        required
+                    >
+                <!-- <small class="alert" *ngIf="loginForm.controls['nickName'].dirty && loginForm.hasError('required', 'nickName')">Mandatory completion!</small> -->
+                </div>
+
+                <div>
+                    <input 
+                        type="password" 
+                        placeholder="Password"                                                               
+                        [type]="hide ? 'password' : 'text'"
+                        formControlName="password" 
+                        name="password" 
+                        class="dados-input"
+                        required
+                    >
+                    <span 
+                        class="material-icons" 
+                        id="icon" 
+                        (click)="hide = !hide">
+                        {{hide ? 'visibility' : 'visibility_off'}}
+                    </span>
+                </div>
+                
+                <button 
+                    type="submit"
+                    class="btn"
+                    [disabled]="!loginForm.valid" 
+                    [ngClass]="{ 'getColor' : loginForm.valid }"
+                    >
+                    Enter
+                </button>
+
+                <a [routerLink]="['/rDice']">Register > </a>
+            </form>
+        </section>
+    </article>
+</app-card>

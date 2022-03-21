@@ -1,0 +1,68 @@
+#container-regi-dados .conteudo-regi-dados {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    margin: auto;
+}
+
+#container-regi-dados .conteudo-regi-dados form .checkbox{
+    color: var(--font-text-white);
+    font: 300 0.6rem "Inter";
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    width: 10rem;
+
+    margin: auto;   
+    
+    box-sizing: border-box;
+}
+
+input[type=checkbox]{
+  appearance: none;
+  -webkit-appearance: none;
+
+  width: 25px;
+  height: 25px;
+
+  box-sizing: border-box;
+
+  vertical-align: bottom;
+
+  background-color:darkgrey;
+
+  border-radius: 5px;
+
+  cursor: pointer;
+
+//   margin: 0.3rem 0 0.3rem;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  outline: none;
+
+}
+
+input[type=checkbox]::after{
+    content: url('../../../assets/img/check_white.svg');
+    // content: "\f00c";
+    font-family: "Font Awesome 5 Free";
+    font-weight: 90rem;
+    color: white;
+    display: none;
+}
+
+input[type=checkbox]:checked{
+    content: url('../../../assets/img/check_white.svg');
+    background-color: darkgrey;
+}
+
+input[type=checkbox]:checked:after{
+    display: block;
+}
+

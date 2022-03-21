@@ -1,7 +1,7 @@
 <app-card>
-    <article id="container-cds-dados">
-        <section class="conteudo-cds-dados" >
-            <form id="" [formGroup]="dadosForm" (ngSubmit)="onSubmit()">
+    <article id="container-regi-dados">
+        <section class="conteudo-regi-dados" >
+            <form id="" [formGroup]="registerForm" (ngSubmit)="onSubmit()">
 
                 <legend>Account Data</legend>
                 <input 
@@ -24,11 +24,18 @@
                     placeholder="E-Mail" 
                     formControlName="email" 
                     class="dados-input">
-                <input 
+                <div>
+                    <input 
                     type="text" 
                     placeholder="Contact" 
                     formControlName="contact" 
                     class="dados-input">
+
+                    <div class="checkbox" >
+                        <label class="text-checkbox" for="check" >Contact also on WhatsApp</label>
+                        <input type="checkbox" name="check" id="check" formControlName="check">
+                    </div>
+                </div>
                 <input 
                     type="password" 
                     placeholder="Password" 
@@ -36,13 +43,20 @@
                     formControlName="password" 
                     class="dados-input"> 
 
-                <span class="material-icons" Id="icon" (click)="hide = !hide">
+                <span class="material-icons" id="icon" (click)="hide = !hide">
                     {{hide ? 'visibility' : 'visibility_off'}}
                     </span>
 
-                <button type="submit" [disabled]="!dadosForm.valid" (click)="btnContinue()" class="btn" [ngClass]="{ 'getColor' : dadosForm.valid }" >Continue</button>
+                <button 
+                    type="submit" 
+                    [disabled]="!registerForm.valid" 
+                    (click)="btnContinue()" 
+                    class="btn" 
+                    [ngClass]="{ 'getColor' : registerForm.valid }" 
+                    >
+                    Continue
+                </button>
 
-    
                 <a [routerLink]="['/login']">Login ></a>
 
             </form>

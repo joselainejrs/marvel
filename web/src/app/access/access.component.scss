@@ -5,10 +5,7 @@ legend {
     margin: 10px 0 35px 0;
 }
 
-legend,
-a,
-button,
-input {
+legend, a, button, input {
     color: var(--font-text-white);
 }
 
@@ -20,18 +17,19 @@ form .dados-input {
     margin: 15px auto;
     padding: 15px;
 
-    width: 14.7rem;
-    height: 2.5rem;
+    width: 18rem;
+    height: 3rem;
 
     border-radius: 5px;
     border: 1px solid var(--card-input);
 
     background-color: var(--card-backgroud);
+
+    font: 300 0.8rem "Inter";
 }
 
-input::placeholder,
-a {
-    font: 300 0.6rem "Inter";
+input::placeholder, a {
+    font: 300 0.8rem "Inter";
 
     color: var(--font-text-white);
 }
@@ -47,25 +45,52 @@ a {
     cursor: pointer;
 }
 
-// .btn:active{
-// background-color: var(--card-button);
-
-// }
-
 .getColor {
     background-color: var(--card-button);
     border: 1px solid var(--card-button);
 }
 
-.fillField {
-    border: 1px solid var(--card-button);
+.inputValid{
+    border: 1px solid green ;
+
 }
 
+.inputInvalid{
+    border: 1px solid red !important;
+}
+
+
 a {
-    margin-right: 2rem;
+    margin-right: 0.5rem;
     text-decoration: none;
 
     font-size: 15px;
 
     float: right;
+
+    cursor: pointer;
+}
+
+.input-together-data  .input-together {
+    width: 175px;
+}
+
+.input-together-data {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    margin: auto;
+
+    width: 18.5rem;
+}
+
+form #icon {
+    position: relative;
+    bottom: 2.7rem;
+    left: 15.5rem;
+
+    color: var(--card-icon);
+
+    cursor: pointer;
 }

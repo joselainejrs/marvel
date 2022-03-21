@@ -1,0 +1,51 @@
+<app-card>
+    <article id="container-rgt-payment">
+        <section class="conteudo-rgt-payment" >
+            <form id="" [formGroup]="registerPaymentForm" (ngSubmit)="onSubmit()">
+
+                <legend>Payment Data</legend>
+                <input 
+                    type="text" 
+                    placeholder="Card Number" 
+                    formControlName="cardNumber" 
+                    class="dados-input">
+
+                <div class="input-together-data">
+                    <input 
+                        type="text" 
+                        placeholder="Validity" 
+                        formControlName="validity" 
+                        class="dados-input input-together">
+                    <input 
+                        type="text" 
+                        placeholder="CVV" 
+                        formControlName="cvv" 
+                        class="dados-input input-together">
+                </div>
+                <input 
+                    type="text" 
+                    placeholder="Cardholder Name" 
+                    formControlName="cardholderName" 
+                    class="dados-input">
+                <input 
+                    type="text" 
+                    placeholder="CPF of the Holder" 
+                    formControlName="cpf" 
+                    class="dados-input">
+  
+                <button 
+                    type="submit" 
+                    [disabled]="!registerPaymentForm.valid" 
+                    (click)="btnContinue()" 
+                    class="btn" 
+                    [ngClass]="{ 'getColor' : registerPaymentForm.valid }" 
+                    >
+                    Continue
+                </button>
+
+                <a [routerLink]="['/login']">Login ></a>
+
+            </form>
+        </section>
+    </article>
+</app-card>

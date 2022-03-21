@@ -5,7 +5,9 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { LoginComponent } from './login/login.component';
 import { CardComponent } from './card/card.component';
-import { CadastroDadosComponent } from './cadastro-dados/cadastro-dados.component';
+import { RegisterDiceComponent } from './register-dice/register-dice.component';
+import { RegisterPaymentComponent } from './register-payment/register-payment.component';
+import { RegisterAddressComponent } from './register-address/register-address.component';
 
 
 
@@ -13,7 +15,9 @@ import { CadastroDadosComponent } from './cadastro-dados/cadastro-dados.componen
   declarations: [
     LoginComponent,
     CardComponent,
-    CadastroDadosComponent
+    RegisterDiceComponent,
+    RegisterPaymentComponent,
+    RegisterAddressComponent
   ],
   imports: [
     CommonModule,
@@ -23,4 +27,4 @@ import { CadastroDadosComponent } from './cadastro-dados/cadastro-dados.componen
     ReactiveFormsModule
   ]
 })
-export class AcessoModule { }
+export class AccessModule { }
