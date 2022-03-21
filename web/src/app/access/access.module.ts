@@ -1,7 +1,12 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
+import { HttpClientModule, HttpClientJsonpModule } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+
+import { NgxMaskModule } from 'ngx-mask'
+
+import { AccessService } from '../access.service';
 
 import { LoginComponent } from './login/login.component';
 import { CardComponent } from './card/card.component';
@@ -22,9 +27,13 @@ import { RegisterAddressComponent } from './register-address/register-address.co
   imports: [
     CommonModule,
     RouterModule,
+    HttpClientModule,
+    HttpClientJsonpModule,
+    NgxMaskModule.forChild(),
 
     FormsModule,
     ReactiveFormsModule
-  ]
+  ],
+  providers: [ AccessService ],
 })
 export class AccessModule { }

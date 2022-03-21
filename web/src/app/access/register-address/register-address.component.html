@@ -8,6 +8,8 @@
                     type="text" 
                     placeholder="CEP" 
                     formControlName="cep" 
+                    mask="00000-000" 
+                    (blur)="valueCep()"
                     class="dados-input">
 
                 <div class="input-together-data">
@@ -37,7 +39,8 @@
                     <input 
                         type="text" 
                         placeholder="City" 
-                        formControlName="city" 
+                        formControlName="city"
+                        maxlength="2"
                         class="dados-input input-together">
                 </div>
   

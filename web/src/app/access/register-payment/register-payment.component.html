@@ -8,6 +8,7 @@
                     type="text" 
                     placeholder="Card Number" 
                     formControlName="cardNumber" 
+                    mask="0000 0000 0000 0000" 
                     class="dados-input">
 
                 <div class="input-together-data">
@@ -15,11 +16,13 @@
                         type="text" 
                         placeholder="Validity" 
                         formControlName="validity" 
+                        mask="00/00" 
                         class="dados-input input-together">
                     <input 
                         type="text" 
                         placeholder="CVV" 
                         formControlName="cvv" 
+                        maxlength="3"
                         class="dados-input input-together">
                 </div>
                 <input 
@@ -31,6 +34,7 @@
                     type="text" 
                     placeholder="CPF of the Holder" 
                     formControlName="cpf" 
+                    mask="000.000.000-00" 
                     class="dados-input">
   
                 <button 

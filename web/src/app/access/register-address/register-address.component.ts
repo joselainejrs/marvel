@@ -1,6 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, Validators } from '@angular/forms';
 
+import { AccessService } from 'src/app/access.service';
+import { States } from '../interfaces/states';
+
+
 @Component({
   selector: 'app-register-address',
   templateUrl: './register-address.component.html',
@@ -11,7 +15,11 @@ import { FormBuilder, Validators } from '@angular/forms';
 })
 export class RegisterAddressComponent implements OnInit {
 
-  constructor( private formBuilder: FormBuilder) { }
+  // states: States[];
+
+  constructor(
+    private formBuilder: FormBuilder,
+    private accessService: AccessService) { }
 
   registerAddressForm = this.formBuilder.group({
     cep: ['', Validators.required],
@@ -22,13 +30,39 @@ export class RegisterAddressComponent implements OnInit {
     city: [null, Validators.required],
   });
 
-  ngOnInit(): void {
+  ngOnInit(): void { }
+
+  onSubmit() {
+    console.log(this.registerAddressForm.controls);
   }
 
-  onSubmit(){}
+  valueCep() {
+    const cep: any = this.registerAddressForm.controls['cep'].value;
 
-  btnContinue(){}
+    if (cep != null && cep !== '') {
+      this.accessService.getCep(cep)?.subscribe(data => {
+        return this.dataform(data)
+        console.log(data)
+      });
+    }
 
-  
+    console.log(this.accessService.getCep(cep));
+  }
+
+  dataform(data: any): void {
+    this.registerAddressForm.patchValue({
+      cep: data.cep,
+      address: data.logradouro,
+      no: '',
+      complement: data.complemento,
+      district: data.bairro,
+      city: data.localidade,
+    })
+
+  }
+
+  btnContinue() { }
+
+
 
 }

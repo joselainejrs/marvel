@@ -20,17 +20,19 @@
                     formControlName="lastName" 
                     class="dados-input">
                 <input 
-                    type="text" 
+                    type="email" 
                     placeholder="E-Mail" 
                     formControlName="email" 
                     class="dados-input">
-                <div>
-                    <input 
-                    type="text" 
-                    placeholder="Contact" 
-                    formControlName="contact" 
-                    class="dados-input">
-
+                    
+                    <div>
+                        <input 
+                        type="text" 
+                        placeholder="Contact" 
+                        formControlName="contact" 
+                        mask="(00) 0000-0000" 
+                        class="dados-input">
+                        
                     <div class="checkbox" >
                         <label class="text-checkbox" for="check" >Contact also on WhatsApp</label>
                         <input type="checkbox" name="check" id="check" formControlName="check">
