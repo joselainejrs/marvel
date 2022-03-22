@@ -6,19 +6,20 @@ import { HttpClient } from '@angular/common/http';
 })
 export class AccessService {
 
-  constructor(private http: HttpClient) { }
+  constructor(
+    private http: HttpClient,
+  ) {   }
 
   getCep(cep: string) {
-    cep = cep.replace(/\D/g, '');
-    debugger
-    //Verifica se campo cep possui valor informado.
-    if (cep !== '') {
-      //Expressão regular para validar o CEP.
-      var validacep = /^[0-9]{8}$/;
-      //Valida o formato do CEP.
-      if (validacep.test(cep)) {
-        this.http.get(`https://viacep.com.br/ws/${cep}/json`);
-      }
-    }
+    return this.http.get(`https://viacep.com.br/ws/${cep}/json`);
   }
+
+  setData(key: string, data: any) {
+    localStorage.setItem(key, JSON.stringify(data));
+  }
+
+  // get(key: string): any{
+  //   return JSON.parse(this.storage.getItem(key));
+  // }
+
 }
