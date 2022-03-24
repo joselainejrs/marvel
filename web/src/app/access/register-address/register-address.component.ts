@@ -1,8 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, Validators } from '@angular/forms';
 
-import { AccessService } from 'src/app/access.service';
-import { Profile } from '../interfaces/profile';
+import { AccessService } from 'src/app/access/access.service';
 
 
 @Component({

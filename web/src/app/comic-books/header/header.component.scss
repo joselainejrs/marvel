@@ -1,0 +1,41 @@
+article {
+    background-color: var(--card-backgroud);
+    // border: 1px solid 0 0 1em var(--card-gradient);
+    box-shadow: 0em 0.6em 1em var(--comics);
+}
+
+article header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-sizing: border-box;
+}
+
+article header nav {
+    margin: 2rem;
+}
+
+article header nav ul{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+}
+
+article header nav ul li{
+    list-style-type: none;
+    font: 400 1.5rem "Roboto Condensed";
+    
+    padding: 0.7rem;
+}
+
+article header nav ul li a{
+    text-decoration: none;
+    color: var(--font-text-white);
+}
+
+article header img{
+    width: 8rem;
+    margin: 2rem;
+
+}
