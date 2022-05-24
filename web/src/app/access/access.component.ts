@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { FormBuilder, Validators } from '@angular/forms';
+
 
 @Component({
   selector: 'app-access',
@@ -7,9 +9,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AccessComponent implements OnInit {
 
-  constructor() { }
+  constructor( private formBuilder: FormBuilder) { }
 
   ngOnInit(): void {
   }
 
+ diceInput(){}
 }

@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
 
 import { AccessService } from 'src/app/access/access.service';
-
 
 @Component({
   selector: 'app-register-address',
@@ -14,11 +14,15 @@ import { AccessService } from 'src/app/access/access.service';
 })
 export class RegisterAddressComponent implements OnInit {
 
+  
   constructor(
     private formBuilder: FormBuilder,
-    private accessService: AccessService) { }
+    private accessService: AccessService,
+    private router: Router,) 
+    {}
 
   registerAddressForm = this.formBuilder.group({
+      id: [''],
       cep: ['', Validators.required],
       address: ['', Validators.required],
       no: ['', Validators.required],
@@ -27,10 +31,11 @@ export class RegisterAddressComponent implements OnInit {
       city: [null, Validators.required],
   });
 
-  ngOnInit(): void { }
+  ngOnInit(): void {}
 
-  onSubmit() {
+  onSubmit(): void {
     console.log(this.registerAddressForm.controls);
+    this.handleData();
   }
 
   valueCep() {
@@ -66,13 +71,20 @@ export class RegisterAddressComponent implements OnInit {
   }
 
   btnContinue() {
-    
-    // this.profile.filter(cep => cep.cep = this.registerAddressForm.controls['cep'].value);
-    // this.profile.filter(address => address.address = this.registerAddressForm.controls['address'].value);
-    // this.profile.filter(no => no.no = this.registerAddressForm.controls['no'].value);
-    // this.profile.filter(complement => complement.complement = this.registerAddressForm.controls['complement'].value);
-    // this.profile.filter(district => district.district = this.registerAddressForm.controls['district'].value);
-    // this.profile.filter(city => city.city = this.registerAddressForm.controls['city'].value);
+    this.accessService.setDataNew();
+  }
 
-   }
+  handleData(){
+    const setFormAddress = {
+      cep: this.registerAddressForm.get('cep')?.value,
+      address: this.registerAddressForm.get('address')?.value,
+      no: this.registerAddressForm.get('no')?.value,
+      complement: this.registerAddressForm.get('complement')?.value,
+      district: this.registerAddressForm.get('district')?.value,
+      city: this.registerAddressForm.get('city')?.value,
+    }
+     this.accessService.setAddress(setFormAddress);
+     this.router.navigate(['login']);
+    
+  }
 }
