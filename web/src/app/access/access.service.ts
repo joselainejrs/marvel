@@ -107,5 +107,6 @@ export class AccessService implements OnInit {
       console.log(this.profiles);
       localStorage.setItem('profiles', JSON.stringify(this.profiles));
   }
-
+// modelo de cadastro 
+// https://pt.stackoverflow.com/questions/282406/append-javascript
 }
