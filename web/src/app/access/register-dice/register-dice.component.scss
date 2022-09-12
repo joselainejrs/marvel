@@ -53,7 +53,7 @@ input[type=checkbox]::after{
     // content: "\f00c";
     font-family: "Font Awesome 5 Free";
     font-weight: 90rem;
-    color: white;
+    color: var(--font-text-white);
     display: none;
 }
 

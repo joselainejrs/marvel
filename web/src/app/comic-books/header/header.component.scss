@@ -9,10 +9,12 @@ article header{
     align-items: center;
     justify-content: space-between;
     box-sizing: border-box;
+    width: 100%;
+    height: 5rem;
 }
 
 article header nav {
-    margin: 2rem;
+    margin-left: 3rem;
 }
 
 article header nav ul{
@@ -26,7 +28,7 @@ article header nav ul li{
     list-style-type: none;
     font: 400 1.5rem "Roboto Condensed";
     
-    padding: 0.7rem;
+    padding-right: 0.7rem;
 }
 
 article header nav ul li a{
@@ -36,6 +38,6 @@ article header nav ul li a{
 
 article header img{
     width: 8rem;
-    margin: 2rem;
+    margin-right: 3rem;
 
 }

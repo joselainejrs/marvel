@@ -50,7 +50,6 @@ export class AccessService implements OnInit {
 
   //set da dices
   setDice(Dice: any) {
-
     this.nickName = Dice.nickName;
     this.firstName = Dice.firstName;
     this.lastName = Dice.lastName;
@@ -58,7 +57,6 @@ export class AccessService implements OnInit {
     this.contact = Dice.contact;
     this.check = Dice.check;
     this.password = Dice.password;
-
   }
 
   setPayment(Dice: any) {
@@ -71,7 +69,6 @@ export class AccessService implements OnInit {
 
   // 
   setAddress(Dice: any) {
-
     this.cep = Dice.cep;
     this.address = Dice.address;
     this.no = Dice.no;

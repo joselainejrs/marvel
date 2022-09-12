@@ -18,12 +18,12 @@ export class RegisterAddressComponent implements OnInit {
   constructor(
     private formBuilder: FormBuilder,
     private accessService: AccessService,
-    private router: Router,) 
-    {}
+    private router: Router
+    ) {}
 
   registerAddressForm = this.formBuilder.group({
       id: [''],
-      cep: ['', Validators.required],
+      cep: ['', Validators.required,],
       address: ['', Validators.required],
       no: ['', Validators.required],
       complement: ['', Validators.required],
@@ -34,14 +34,12 @@ export class RegisterAddressComponent implements OnInit {
   ngOnInit(): void {}
 
   onSubmit(): void {
-    console.log(this.registerAddressForm.controls);
-    this.handleData();
+    // console.log(this.registerAddressForm.controls);
+    // this.handleData();
   }
 
   valueCep() {
     const cep: any = this.registerAddressForm.controls['cep'].value;
-
-    // console.log(this.registerAddressForm.controls['cep'].value);
 
     cep.replace(/\D/g, '');
     //Verifica se campo cep possui valor informado.
@@ -71,6 +69,7 @@ export class RegisterAddressComponent implements OnInit {
   }
 
   btnContinue() {
+    this.handleData();
     this.accessService.setDataNew();
   }
 
@@ -85,6 +84,5 @@ export class RegisterAddressComponent implements OnInit {
     }
      this.accessService.setAddress(setFormAddress);
      this.router.navigate(['login']);
-    
   }
 }

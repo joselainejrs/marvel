@@ -1,0 +1,29 @@
+#card{
+    text-align: center;
+    width: 300px;
+}
+
+#card .imgHQ{
+    width: 13rem;
+    height: 18rem;
+
+    box-shadow: 0em 0.6em 1em var(--comics);
+}
+
+ #card .text{
+    font-family: "Roboto Condensed";
+    color: var(--font-text-black);
+    font-weight: 700;
+    text-align: left;
+    
+    width: 16rem;
+    margin: 0.8rem 0 0 2.5rem;
+ }
+
+#card .text .text-hq, .text-details{
+    padding: 6px;
+}
+
+#card .text .text-details{
+    font-weight: 300;
+}

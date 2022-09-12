@@ -13,9 +13,10 @@ import { HeaderComponent } from './comic-books/header/header.component';
 import { ProfileComponent } from './access/profile/profile.component';
 import { DetailsBooksComponent } from './comic-books/details-books/details-books.component';
 import { CardBooksComponent } from './comic-books/card-books/card-books.component';
+import { HqBooksComponent } from './comic-books/hq-books/hq-books.component';
 
 const routes: Routes = [
-  // { path: '', redirectTo: '/home', pathMatch: 'full' },
+  { path: '', redirectTo: '/login', pathMatch: 'full' },
   { path: 'access', component: AccessComponent },
   { path: 'card', component: CardComponent },
   { path: 'login', component: LoginComponent },
@@ -25,9 +26,9 @@ const routes: Routes = [
   { path: 'profile', component: ProfileComponent },
   { path: 'comic', component: ComicBooksComponent },
   { path: 'header', component: HeaderComponent },
+  { path: 'hqBooks', component: HqBooksComponent },
   { path: 'details', component: DetailsBooksComponent },
   { path: 'books', component: CardBooksComponent },
-
 ];
 
 @NgModule({

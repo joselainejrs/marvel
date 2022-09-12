@@ -26,6 +26,14 @@ import { ProfileComponent } from './profile/profile.component';
     RegisterAddressComponent,
     ProfileComponent
   ],
+  exports: [
+    LoginComponent,
+    CardComponent,
+    RegisterDiceComponent,
+    RegisterPaymentComponent,
+    RegisterAddressComponent,
+    ProfileComponent
+  ],
   imports: [
     CommonModule,
     RouterModule,

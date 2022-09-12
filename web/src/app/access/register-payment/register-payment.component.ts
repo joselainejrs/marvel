@@ -38,7 +38,7 @@ export class RegisterPaymentComponent implements OnInit {
 
   btnContinue(){
     this.handleData();
-    this.router.navigate(['rAddress']) 
+    // this.router.navigate(['rAddress']) 
   }
 
   handleData(){
