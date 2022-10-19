@@ -5,8 +5,9 @@ import { RouterModule } from '@angular/router';
 
 import { NgxMaskModule } from 'ngx-mask'
 
-import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+
+import { AppRoutingModule } from './app-routing.module';
 import { AccessModule } from './access/access.module';
 import { FormsModule } from '@angular/forms';
 import { ComicBooksModule } from './comic-books/comic-books.module';
@@ -15,6 +16,7 @@ import { ComicBooksModule } from './comic-books/comic-books.module';
   declarations: [
     AppComponent,
   ],
+  
   imports: [
     BrowserModule,
     AppRoutingModule,

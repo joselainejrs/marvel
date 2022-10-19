@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-
 @Component({
   selector: 'app-card-books',
   templateUrl: './card-books.component.html',
@@ -9,10 +8,13 @@ import { Component, OnInit } from '@angular/core';
   ]
 })
 export class CardBooksComponent implements OnInit {
+  // details = false;
+  comicBooks = true;
+  // @Output() detailsCard: this.comicBooks = false;
 
-  constructor() { }
+
+  constructor( ) { }
 
   ngOnInit(): void {
   }
-
 }
