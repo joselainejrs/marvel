@@ -1,3 +1,7 @@
-.hqs .repet-hq{
- display: flex;
+.container-hqs .repet-hq {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+
+    width: 900px;
+    margin-left: 7rem;
 }
