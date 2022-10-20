@@ -8,22 +8,29 @@ import { NgxMaskModule } from 'ngx-mask'
 import { AppComponent } from './app.component';
 
 import { AppRoutingModule } from './app-routing.module';
-import { AccessModule } from './access/access.module';
 import { FormsModule } from '@angular/forms';
-import { ComicBooksModule } from './comic-books/comic-books.module';
+
+import { CommonModule } from '@angular/common';
+import { PagesModule } from './pages/pages.module';
+import { ServiceModule } from './service/service.module';
 
 @NgModule({
   declarations: [
     AppComponent,
   ],
-  
+  exports:[
+    PagesModule,
+    ServiceModule,
+  ],  
   imports: [
+    PagesModule,
+    ServiceModule,
+    
     BrowserModule,
+    CommonModule,
     AppRoutingModule,
     HttpClientModule,
     RouterModule,
-    AccessModule,
-    ComicBooksModule,
     FormsModule,
     NgxMaskModule.forRoot({
       dropSpecialCharacters: false //ao salvar mantem o mascara

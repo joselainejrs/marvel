@@ -1,0 +1,20 @@
+<div id="container-card-book">
+
+    <div id="card-comic" (click)="displayDetails()">
+        <div>
+            <img class="imgHQ" [src]="'../../../assets/img/img-hq.png'" alt="Imagem de HQ">
+            <div class="text">
+                <p class="text-hq">Ultimate Comics Fallout Facsimile Edition #4</p>
+                <p class="text-details">Bendis, Pichelli</p>
+            </div>
+        </div>
+    </div>
+
+    <ng-template id="card-details">    
+        <img class="imgHQ" [src]="'../../../assets/img/img-hq.png'" alt="Imagem de HQ">
+        <div class="text">
+            <p class="text-hq">Ultimate Comics Fallout Facsimile Edition #4</p>
+            <p class="text-details">Bendis, Pichelli</p>
+        </div>
+    </ng-template>
+</div>

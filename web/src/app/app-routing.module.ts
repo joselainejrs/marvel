@@ -1,34 +1,33 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { ComicBooksComponent } from './pages/comic-books/comic-books.component';
+import { DetailsBooksComponent } from './pages/comic-books/details-books/details-books.component';
+import { HqBooksComponent } from './pages/comic-books/hq-books/hq-books.component';
 
-import { AccessComponent } from './access/access.component';
-import { CardComponent } from './access/card/card.component';
-import { LoginComponent } from './access/login/login.component';
-import { RegisterDiceComponent } from './access/register-dice/register-dice.component';
-import { RegisterPaymentComponent } from './access/register-payment/register-payment.component';
-import { RegisterAddressComponent } from './access/register-address/register-address.component';
+import { LoginComponent } from './pages/login/login.component';
+import { ProfileComponent } from './pages/profile/profile.component';
+import { RegisterAddressComponent } from './pages/register/register-address/register-address.component';
+import { RegisterDiceComponent } from './pages/register/register-dice/register-dice.component';
+import { RegisterPaymentComponent } from './pages/register/register-payment/register-payment.component';
 
-import { ComicBooksComponent } from './comic-books/comic-books.component';
-import { HeaderComponent } from './comic-books/header/header.component';
-import { ProfileComponent } from './access/profile/profile.component';
-import { DetailsBooksComponent } from './comic-books/details-books/details-books.component';
-import { CardBooksComponent } from './comic-books/card-books/card-books.component';
-import { HqBooksComponent } from './comic-books/hq-books/hq-books.component';
+import { RegisterComponent } from './pages/register/register.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/login', pathMatch: 'full' },
-  { path: 'access', component: AccessComponent },
-  { path: 'card', component: CardComponent },
+  
   { path: 'login', component: LoginComponent },
-  { path: 'rDice', component: RegisterDiceComponent },
-  { path: 'rPayment', component: RegisterPaymentComponent },
-  { path: 'rAddress', component: RegisterAddressComponent },
-  { path: 'profile', component: ProfileComponent },
+
+  { path: 'register', component: RegisterComponent },
+  { path: 'register/dice', component: RegisterDiceComponent },
+  { path: 'register/payment', component: RegisterPaymentComponent },
+  { path: 'register/address', component: RegisterAddressComponent },
+  
   { path: 'comic', component: ComicBooksComponent },
-  { path: 'header', component: HeaderComponent },
-  { path: 'hqBooks', component: HqBooksComponent },
-  { path: 'details', component: DetailsBooksComponent },
-  { path: 'books', component: CardBooksComponent },
+  { path: 'comic/hqlist', component: HqBooksComponent },
+  { path: 'comic/hqdetails', component: DetailsBooksComponent },
+
+  { path: 'profile', component: ProfileComponent },
+
 ];
 
 @NgModule({

@@ -22,3 +22,8 @@
     --bar-higher: #272827;
     --backgroud: #F8F6F6;
 }
+
+#backgroud{
+    background-color: var(--backgroud);
+    height: 100vh;
+}
