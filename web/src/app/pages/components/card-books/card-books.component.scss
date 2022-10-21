@@ -1,63 +1,60 @@
-#container-card-book #card-comic{
+#container-card-book{
     text-align: center;
-    width: 300px;
+    width: 330px;
     margin-bottom: 30px;
 
     cursor: pointer;
 }
 
-#container-card-book #card-comic .imgHQ{
+#container-card-book .imgHQ{
     width: 13rem;
     height: 18rem;
 
     box-shadow: 0em 0.6em 1em var(--comics);
 }
 
-#container-card-book #card-comic .text{
+#container-card-book .text-list, .text-details{
     font: 700 1rem "Roboto Condensed";
     color: var(--font-text-black);
+ }
+
+#container-card-book .text-list{
     text-align: left;
     
     width: 16rem;
-    margin: 0.8rem 0 0 2.5rem;
+    margin: 0.8rem 0 0 3.8rem;
  }
 
- #container-card-book #card-comic .text .text-hq, .text-details{
-    padding: 6px;
+ #container-card-book .text-list .text-topic, .text-description{
+    padding: 6px 0;
 }
 
-#container-card-book #card-comic .text .text-details{
+#container-card-book .text-list .text-description{
     font-weight: 300;
 }
 
 // card de detalhes do comic 
 
-#container-card-book #card-details{
-    text-align: center;
-    // width: 300px;
-    // margin-bottom: 30px;
-}
+#container-card-book .img-details{
+    width: 18rem;
+    height: 24rem;
 
-#container-card-book #card-details .imgHQ{
-    width: 13rem;
-    height: 18rem;
-
+    margin-left: 62px;
+    
     box-shadow: 0em 0.6em 1em var(--comics);
 }
 
-#container-card-book #card-details .text{
-    font: 700 1rem "Roboto Condensed";
-    color: var(--font-text-black);
+#container-card-book .text-details{
     text-align: left;
-    
-    width: 16rem;
-    margin: 0.8rem 0 0 2.5rem;
+    position: relative;
+    bottom: 18rem;
+    left: 24rem;
  }
 
- #container-card-book #card-details .text .text-hq, .text-details{
-    padding: 6px;
+ #container-card-book .text-details .text-topic, .text-description{
+    padding: 6px 0;
 }
 
-#container-card-book #card-details .text .text-details{
+#container-card-book .text-details .text-description{
     font-weight: 300;
 }

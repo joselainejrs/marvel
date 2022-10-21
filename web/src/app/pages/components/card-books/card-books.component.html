@@ -1,20 +1,45 @@
 <div id="container-card-book">
 
-    <div id="card-comic" (click)="displayDetails()">
-        <div>
+    <div (click)="toggle()">
+
+        <div *ngIf="listBlock; else detailsBlock">
             <img class="imgHQ" [src]="'../../../assets/img/img-hq.png'" alt="Imagem de HQ">
-            <div class="text">
-                <p class="text-hq">Ultimate Comics Fallout Facsimile Edition #4</p>
-                <p class="text-details">Bendis, Pichelli</p>
+            <div class="text-list">
+                <p class="text-topic">Ultimate Comics Fallout Facsimile Edition #4</p>
+                <p class="text-description">Bendis, Pichelli</p>
             </div>
         </div>
+
+        <ng-template #detailsBlock>
+            <img class="img-details" [src]="'../../../assets/img/img-hq.png'" alt="Imagem de HQ">
+            <div class="text-details">
+                <p class="text-topic">Ultimate Comics Fallout Facsimile Edition #4</p>
+                <div class="text-description">
+                    <div>
+                        <div class="dice">
+                            <p><span>Cast</span>September 01, 2021</p>
+                            <p><span>Cast</span>Cavan Scott</p>
+                        </div>
+                        <div class="dice">
+                            <p><span>Cast</span>Ario Anindito</p>
+                            <p><span>Cast</span>Phil Noto</p>
+                        </div>
+                    </div>
+                    <div class="dice">
+                        <span>Cast</span>
+                        <p>A NEW STORY BEGINS THIS ISSUE – THE SHADOW OF THE NIHIL! Following the terrible events of The
+                            Rising Storm, the villainous NIHIL are in retreat, hunted by THE JEDI. WAYSEEKER KNIGHT ORLA
+                            JARENI is attacked by a lone Nihil Stormship in deep space, a Stormship commanded by one of
+                            the
+                            Jedi’s own. Which of STARLIGHT BEACON’S number have joined the Nihil Horde? And how far will
+                            they turn from the Light?
+                        </p>
+                    </div>
+                    <p><span>Cast</span>Jedi, Orla Jareni, Starlight Beacon, Avar Kriss</p>
+                </div>
+            </div>
+        </ng-template>
+
     </div>
 
-    <ng-template id="card-details">    
-        <img class="imgHQ" [src]="'../../../assets/img/img-hq.png'" alt="Imagem de HQ">
-        <div class="text">
-            <p class="text-hq">Ultimate Comics Fallout Facsimile Edition #4</p>
-            <p class="text-details">Bendis, Pichelli</p>
-        </div>
-    </ng-template>
 </div>
