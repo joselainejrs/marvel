@@ -11,6 +11,14 @@
     width: 13rem;
 }
 
-#container-rgt-address .conteudo-rgt-address .input-together-data .input-number {
-    width: 90px;
+#container-rgt-address .conteudo-rgt-address .input-complement{
+    margin-bottom: 0;
+}
+#container-rgt-address .conteudo-rgt-address .input-together-data .input-city{
+    width: 210px;
+    // width: 115px;
+}
+
+#container-rgt-address .conteudo-rgt-address .input-together-data .input-minor-field {
+    width: 70px;
 }

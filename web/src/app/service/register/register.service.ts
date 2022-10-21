@@ -19,11 +19,11 @@ lastName = '';
 email = '';
 contact = '';
 check = '';
-cardNumber = '';
-validity = '';
-cvv = '';
-cardholderName = '';
-cpf = '';
+// cardNumber = '';
+// validity = '';
+// cvv = '';
+// cardholderName = '';
+// cpf = '';
 password = '';
 cep = '';
 address = '';
@@ -58,13 +58,13 @@ setDice(Dice: any) {
   this.password = Dice.password;
 }
 
-setPayment(Dice: any) {
-  this.cardNumber = Dice.cardNumber;
-  this.validity = Dice.validity;
-  this.cvv = Dice.cvv;
-  this.cardholderName = Dice.cardholderName;
-  this.cpf = Dice.cpf;
-}
+// setPayment(Dice: any) {
+//   this.cardNumber = Dice.cardNumber;
+//   this.validity = Dice.validity;
+//   this.cvv = Dice.cvv;
+//   this.cardholderName = Dice.cardholderName;
+//   this.cpf = Dice.cpf;
+// }
 
 // 
 setAddress(Dice: any) {
@@ -86,11 +86,11 @@ setDataNew() {
     contact: this.contact,
     check: this.check,
     password: this.password,
-    cardNumber: this.cardNumber,
-    validity: this.validity,
-    cvv: this.cvv,
-    cardholderName: this.cardholderName,
-    cpf: this.cpf,
+    // cardNumber: this.cardNumber,
+    // validity: this.validity,
+    // cvv: this.cvv,
+    // cardholderName: this.cardholderName,
+    // cpf: this.cpf,
     cep: this.cep,
     address: this.address,
     no: this.no,

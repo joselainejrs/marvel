@@ -31,7 +31,7 @@ form .dados-input {
 input::placeholder, a {
     font: 200 0.8rem "Inter";
 
-    color: var(--font-text-white);
+    // color: var(--font-text-white);
 }
 
 .btn {
@@ -71,9 +71,9 @@ a {
     cursor: pointer;
 }
 
-.input-together-data  .input-together {
-    width: 175px;
-}
+// .input-together-data  .input-together {
+//     width: 175px;
+// }
 
 .input-together-data {
     display: flex;

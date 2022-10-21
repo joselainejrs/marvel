@@ -56,7 +56,7 @@ export class RegisterDiceComponent implements OnInit {
       password: this.registerForm.get('password')?.value,
     }
      this.registerService.setDice(setFormDice);
-     this.router.navigate(['/register/payment']) 
+     this.router.navigate(['/register/address']) 
 
     //criação de um número para ID
     // 

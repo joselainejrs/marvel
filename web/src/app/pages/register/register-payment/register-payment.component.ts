@@ -49,7 +49,7 @@ export class RegisterPaymentComponent implements OnInit {
         cpf: this.registerPaymentForm.get('cpf')?.value,
       }
 
-      this.registerService.setPayment(setPaymentDice);
+      // this.registerService.setPayment(setPaymentDice);
       this.router.navigate(['/register/address']);    
   }
 
