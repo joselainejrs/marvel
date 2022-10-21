@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 @Component({
   selector: 'app-card-books',
@@ -6,6 +6,7 @@ import { Router } from '@angular/router';
   styleUrls: ['./card-books.component.scss']
 })
 export class CardBooksComponent implements OnInit {
+  // @Input() listBlock;
   listBlock = true;
 
   constructor(
