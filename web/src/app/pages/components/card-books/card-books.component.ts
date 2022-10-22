@@ -1,22 +1,16 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
 @Component({
   selector: 'app-card-books',
   templateUrl: './card-books.component.html',
   styleUrls: ['./card-books.component.scss']
 })
-export class CardBooksComponent implements OnInit {
-  // @Input() listBlock;
-  listBlock = true;
 
-  constructor(
-    private router: Router
-  ) { }
+export class CardBooksComponent implements OnInit {
+  @Input() listBlock = true;
+
+  constructor( ) { }
 
   ngOnInit(): void { }
 
-  toggle() {
-    this.listBlock = false;
-    return this.router.navigate(['/comic/hqdetails']);
-  }
+
 }

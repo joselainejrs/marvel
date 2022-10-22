@@ -1,30 +1,31 @@
 <div id="container-card-book">
 
-    <!-- <div (click)="toggle()"> -->
-
-        <div *ngIf="listBlock; else detailsBlock">
-            <img class="imgHQ" [src]="'../../../assets/img/img-hq.png'" alt="Imagem de HQ">
-            <div class="text-list">
-                <p class="text-topic">Ultimate Comics Fallout Facsimile Edition #4</p>
-                <p class="text-description">Bendis, Pichelli</p>
-            </div>
+    <div *ngIf="listBlock; else detailsBlock">
+        <img class="imgHQ" [src]="'../../../assets/img/img-hq.png'" alt="Imagem de HQ">
+        <div class="text-list">
+            <p class="text-topic-list">Ultimate Comics Fallout Facsimile Edition #4</p>
+            <p class="text-description-list">Bendis, Pichelli</p>
         </div>
+    </div>
 
-        <ng-template #detailsBlock>
+    <ng-template #detailsBlock>
+        <div class="text-messenger">
             <img class="img-details" [src]="'../../../assets/img/img-hq.png'" alt="Imagem de HQ">
             <div class="text-details">
-                <p class="text-topic">Ultimate Comics Fallout Facsimile Edition #4</p>
-                <div class="text-description">
-                    <div>
+                <p class="text-topic-details">Ultimate Comics Fallout Facsimile Edition #4</p>
+                <div class="text-description-details">
+
+                    <div class="dice-details">
                         <div class="dice">
-                            <p><span>Cast</span>September 01, 2021</p>
-                            <p><span>Cast</span>Cavan Scott</p>
-                        </div>
+                            <p><span>Published:</span>September 01, 2021</p>
+                            <p><span>Penciler:</span>Ario Anindito</p>
+                            </div>
                         <div class="dice">
-                            <p><span>Cast</span>Ario Anindito</p>
-                            <p><span>Cast</span>Phil Noto</p>
+                            <p><span>Writer:</span>Cavan Scott</p>
+                            <p><span>Cover Artist:</span>Phil Noto</p>
                         </div>
                     </div>
+                    
                     <div class="dice">
                         <span>Cast</span>
                         <p>A NEW STORY BEGINS THIS ISSUE – THE SHADOW OF THE NIHIL! Following the terrible events of The
@@ -38,8 +39,7 @@
                     <p><span>Cast</span>Jedi, Orla Jareni, Starlight Beacon, Avar Kriss</p>
                 </div>
             </div>
-        </ng-template>
-
-    <!-- </div> -->
+        </div>
+    </ng-template>
 
 </div>
