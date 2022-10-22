@@ -50,8 +50,8 @@ getCep(cep: string) {
 //set da dices
 setDice(Dice: any) {
   this.nickName = Dice.nickName;
-  this.firstName = Dice.firstName;
-  this.lastName = Dice.lastName;
+  // this.firstName = Dice.firstName;
+  // this.lastName = Dice.lastName;
   this.email = Dice.email;
   this.contact = Dice.contact;
   this.check = Dice.check;
@@ -80,8 +80,8 @@ setDataNew() {
   const profileNew = {
     id: this.id = Guid.create().toString(),
     nickName: this.nickName,
-    firstName: this.firstName,
-    lastName: this.lastName,
+    // firstName: this.firstName,
+    // lastName: this.lastName,
     email: this.email,
     contact: this.contact,
     check: this.check,

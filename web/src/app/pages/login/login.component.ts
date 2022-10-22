@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, Validators } from '@angular/forms';
+import { AbstractControl, FormBuilder, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-login',
@@ -20,16 +21,32 @@ export class LoginComponent implements OnInit {
 
   constructor(
     private formBuilder: FormBuilder,
+    private router: Router,
+
   ) { }
+
+  get nickname() { return this.loginForm.get('nickname')?.value; }
+  get password() { return this.loginForm.get('password')?.value; }
+
 
   ngOnInit(): void { }
 
-  onSubmit() { }
+  onSubmit() { 
+    let obterDadosDoUsuario = JSON.parse(localStorage.getItem('profiles') || '' );
+    console.log(this.nickname);
+    console.log(this.password);
+
+    obterDadosDoUsuario.forEach((element: { nickName: string | null; password: string | null; }) => {
+      if(element.nickName == this.nickname && element.password == this.password){
+         this.router.navigate(['/comic/hqlist']);
+      }
+    });
+  
+  }
 
   btnLogin() { }
 
-   // get e() { return this.loginForm.controls['nickname'].value }
 
-  get nickname() { return this.loginForm.get('nickname'); }
+
 
 }

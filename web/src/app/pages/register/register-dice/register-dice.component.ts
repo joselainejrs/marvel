@@ -26,8 +26,8 @@ export class RegisterDiceComponent implements OnInit {
 
   registerForm = this.formBuilder.group({
     nickName: ['', Validators.required],
-    firstName: ['', Validators.required],
-    lastName: ['', Validators.required],
+    // firstName: ['', Validators.required],
+    // lastName: ['', Validators.required],
     email: ['', Validators.required],
     contact: [null, Validators.required],
     check: ['', Validators.required],
@@ -48,8 +48,8 @@ export class RegisterDiceComponent implements OnInit {
     
     const setFormDice = {
       nickName: this.registerForm.get('nickName')?.value,
-      firstName: this.registerForm.get('firstName')?.value,
-      lastName: this.registerForm.get('lastName')?.value,
+      // firstName: this.registerForm.get('firstName')?.value,
+      // lastName: this.registerForm.get('lastName')?.value,
       email: this.registerForm.get('email')?.value,
       contact: this.registerForm.get('contact')?.value,
       check: this.registerForm.get('check')?.value,
