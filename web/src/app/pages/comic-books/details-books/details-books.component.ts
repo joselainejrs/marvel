@@ -4,15 +4,12 @@ import { Component, OnInit } from '@angular/core';
   selector: 'app-details-books',
   templateUrl: './details-books.component.html',
   styleUrls: [
-    './details-books.component.scss',
-    '../comic-books.component.scss'
-  ]
+    './details-books.component.scss' ]
 })
 export class DetailsBooksComponent implements OnInit {
   
   constructor() { }
 
-  ngOnInit(): void {
-  }
+  ngOnInit(): void { }
 
 }

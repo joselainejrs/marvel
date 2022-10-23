@@ -1,7 +1,12 @@
-.container-hqs .repet-hq {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+.backgroud {
+    background-color: var(--backgroud);
+    
+    height: 100vh;
+}
 
-    width: 900px;
-    margin-left: 7rem;
+.container-hqs .repet-hq {
+    grid-area: content;
+    display: grid;
+    grid-template-columns: 260px 260px 260px 260px;
+    margin: 0 15% 0 15%;
 }

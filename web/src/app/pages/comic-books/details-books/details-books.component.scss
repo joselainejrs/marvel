@@ -1,9 +1,13 @@
+.backgroud {
+    background-color: var(--backgroud);
+    
+    height: 100vh;
+}
 
 #container-details a {
     text-decoration: none;
 }
 
 #container-details .details-hq {
-    width: 900px;
-    margin-left: 7rem;
+    margin: 0 15% 0 15%;
 }

@@ -1,4 +1,4 @@
-<div id="container-card-book">
+<div id="container-card-list">
 
     <div *ngIf="listBlock; else detailsBlock">
         <img class="imgHQ" [src]="'../../../assets/img/img-hq.png'" alt="Imagem de HQ">
@@ -7,39 +7,41 @@
             <p class="text-description-list">Bendis, Pichelli</p>
         </div>
     </div>
+</div>
 
-    <ng-template #detailsBlock>
-        <div class="text-messenger">
-            <img class="img-details" [src]="'../../../assets/img/img-hq.png'" alt="Imagem de HQ">
-            <div class="text-details">
-                <p class="text-topic-details">Ultimate Comics Fallout Facsimile Edition #4</p>
-                <div class="text-description-details">
 
-                    <div class="dice-details">
-                        <div class="dice">
-                            <p><span>Published:</span>September 01, 2021</p>
-                            <p><span>Penciler:</span>Ario Anindito</p>
-                            </div>
-                        <div class="dice">
-                            <p><span>Writer:</span>Cavan Scott</p>
-                            <p><span>Cover Artist:</span>Phil Noto</p>
-                        </div>
+<ng-template #detailsBlock>
+    <div id="container-card-details">
+        <img class="img-details" [src]="'../../../assets/img/img-hq.png'" alt="Imagem de HQ">
+        <div class="text-details">
+            <p class="text-topic-details">Ultimate Comics Fallout Facsimile Edition #4</p>
+            <div class="text-description-details">
+
+                <div class="dice-details">
+                    <div class="dice-Published">
+                        <p><span>Published:</span>September 01, 2021</p>
+                        <p><span>Penciler:</span>Ario Anindito</p>
                     </div>
-                    
-                    <div class="dice">
-                        <span>Cast</span>
-                        <p>A NEW STORY BEGINS THIS ISSUE – THE SHADOW OF THE NIHIL! Following the terrible events of The
-                            Rising Storm, the villainous NIHIL are in retreat, hunted by THE JEDI. WAYSEEKER KNIGHT ORLA
-                            JARENI is attacked by a lone Nihil Stormship in deep space, a Stormship commanded by one of
-                            the
-                            Jedi’s own. Which of STARLIGHT BEACON’S number have joined the Nihil Horde? And how far will
-                            they turn from the Light?
-                        </p>
+                    <div class="dice-Published">
+                        <p class="text-right"><span>Writer:</span>Cavan Scott</p>
+                        <p><span>Cover Artist:</span>Phil Noto</p>
                     </div>
-                    <p><span>Cast</span>Jedi, Orla Jareni, Starlight Beacon, Avar Kriss</p>
                 </div>
+
+                <div class="dice">
+                    <span>Descrition</span>
+                    <p>A NEW STORY BEGINS THIS ISSUE – THE SHADOW OF THE NIHIL! Following
+                        the terrible events of The
+                        Rising Storm, the villainous NIHIL are in retreat, hunted by THE JEDI. WAYSEEKER KNIGHT ORLA
+                        JARENI is attacked by a lone Nihil Stormship in deep space, a Stormship commanded by one of
+                        the
+                        Jedi’s own. Which of STARLIGHT BEACON’S number have joined the Nihil Horde? And how far will
+                        they turn from the Light?
+                    </p>
+                </div>
+
+                <p><span class="text-black">Cast:</span>Jedi, Orla Jareni, Starlight Beacon, Avar Kriss</p>
             </div>
         </div>
-    </ng-template>
-
-</div>
+    </div>
+</ng-template>
