@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
-import { RegisterService } from 'src/app/service/register/register.service';
+import { RegisterService } from 'src/app/service/pages/register/register.service';
 
 @Component({
   selector: 'app-register-address',

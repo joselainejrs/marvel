@@ -3,7 +3,7 @@ import { FormBuilder, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 
 import { Dice } from 'src/app/interfaces/dices';
-import { RegisterService } from 'src/app/service/register/register.service';
+import { RegisterService } from 'src/app/service/pages/register/register.service';
 
 @Component({
   selector: 'app-register-dice',
