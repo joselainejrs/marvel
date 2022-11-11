@@ -6,7 +6,7 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 
 export class CardBooksComponent implements OnInit {
-  @Input() listBlock = true;
+  @Input() listHq = true;
 
   constructor( ) { }
 

@@ -8,36 +8,28 @@ import { RegisterPaymentComponent } from './register/register-payment/register-p
 import { RegisterAddressComponent } from './register/register-address/register-address.component';
 import { RegisterDiceComponent } from './register/register-dice/register-dice.component';
 import { LoginComponent } from './login/login.component';
-import { CardComponent } from './components/card-register-login/card.component';
+import { CardComponent } from '../components/card-register-login/card.component';
 import { ProfileComponent } from './profile/profile.component';
 import { HttpClientJsonpModule, HttpClientModule } from '@angular/common/http';
 import { NgxMaskModule } from 'ngx-mask';
-import { TitleComponent } from './components/title/title.component';
 import { HqBooksComponent } from './comic-books/hq-books/hq-books.component';
-import { HeaderComponent } from './components/header/header.component';
 import { DetailsBooksComponent } from './comic-books/details-books/details-books.component';
-import { CardBooksComponent } from './components/card-books/card-books.component';
+import { ComponentModule } from '../components/components.module';
 
 @NgModule({
   declarations: [
-    CardBooksComponent,
     DetailsBooksComponent,
-    HeaderComponent,
     HqBooksComponent,
-    TitleComponent,
     RegisterPaymentComponent,
     RegisterAddressComponent,
     RegisterDiceComponent,
     LoginComponent,
     CardComponent,
-    ProfileComponent
+    ProfileComponent,
   ],
   exports: [
-    CardBooksComponent,
     DetailsBooksComponent,
-    HeaderComponent,
     HqBooksComponent,
-    TitleComponent,
     RegisterPaymentComponent,
     RegisterAddressComponent,
     RegisterDiceComponent,
@@ -55,6 +47,7 @@ import { CardBooksComponent } from './components/card-books/card-books.component
     ReactiveFormsModule,
     NgxMaskModule.forChild(),
 
+    ComponentModule,
   ]
 })
 export class PagesModule { }

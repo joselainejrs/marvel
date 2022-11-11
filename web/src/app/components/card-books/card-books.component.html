@@ -1,6 +1,6 @@
 <div id="container-card-list">
 
-    <div *ngIf="listBlock; else detailsBlock">
+    <div *ngIf="listHq; else detailsHq">
         <img class="imgHQ" [src]="'../../../assets/img/img-hq.png'" alt="Imagem de HQ">
         <div class="text-list">
             <p class="text-topic-list">Ultimate Comics Fallout Facsimile Edition #4</p>
@@ -9,8 +9,7 @@
     </div>
 </div>
 
-
-<ng-template #detailsBlock>
+<ng-template #detailsHq>
     <div id="container-card-details">
         <img class="img-details" [src]="'../../../assets/img/img-hq.png'" alt="Imagem de HQ">
         <div class="text-details">
@@ -43,5 +42,9 @@
                 <p><span class="text-black">Cast:</span>Jedi, Orla Jareni, Starlight Beacon, Avar Kriss</p>
             </div>
         </div>
+    </div>
+
+    <div>
+        
     </div>
 </ng-template>

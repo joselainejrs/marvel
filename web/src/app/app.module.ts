@@ -13,16 +13,19 @@ import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 import { PagesModule } from './pages/pages.module';
 import { ServiceModule } from './service/service.module';
+import { ComponentModule } from './components/components.module';
 
 @NgModule({
   declarations: [
     AppComponent,
   ],
   exports:[
+    ComponentModule,
     PagesModule,
     ServiceModule,
   ],  
   imports: [
+    ComponentModule,
     PagesModule,
     ServiceModule,
     
