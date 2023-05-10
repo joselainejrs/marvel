@@ -13,24 +13,24 @@ import { RegisterService } from 'src/app/service/pages/register/register.service
 })
 export class RegisterAddressComponent implements OnInit {
 
-  
+
   constructor(
     private formBuilder: FormBuilder,
     private registerService: RegisterService,
     private router: Router
-    ) {}
+  ) {}
 
   registerAddressForm = this.formBuilder.group({
-      id: [''],
-      cep: ['', Validators.required,],
-      address: ['', Validators.required],
-      no: ['', Validators.required],
-      complement: ['', Validators.required],
-      district: [null, Validators.required],
-      city: [null, Validators.required],
+    id: [''],
+    cep: ['', Validators.required,],
+    address: ['', Validators.required],
+    no: ['', Validators.required],
+    complement: ['', Validators.required],
+    district: [null, Validators.required],
+    city: [null, Validators.required],
   });
 
-  ngOnInit(): void {}
+  ngOnInit(): void { window.scrollTo(0, 0);}
 
   onSubmit(): void {
     // console.log(this.registerAddressForm.controls);
@@ -81,7 +81,7 @@ export class RegisterAddressComponent implements OnInit {
       district: this.registerAddressForm.get('district')?.value,
       city: this.registerAddressForm.get('city')?.value,
     }
-     this.registerService.setAddress(setFormAddress);
-     this.router.navigate(['login']);
+    this.registerService.setAddress(setFormAddress);
+    this.router.navigate(['login']);
   }
 }

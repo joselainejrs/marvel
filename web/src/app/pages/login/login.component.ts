@@ -13,7 +13,7 @@ import { Router } from '@angular/router';
 export class LoginComponent implements OnInit {
 
   hide = true;
-  
+
   loginForm = this.formBuilder.group({
     nickname: ['', Validators.required],
     password: ['', Validators.required],
@@ -29,24 +29,21 @@ export class LoginComponent implements OnInit {
   get password() { return this.loginForm.get('password')?.value; }
 
 
-  ngOnInit(): void { }
+  ngOnInit(): void { window.scrollTo(0, 0);}
 
-  onSubmit() { 
-    let obterDadosDoUsuario = JSON.parse(localStorage.getItem('profiles') || '' );
+  onSubmit() {
+    let getUserData = JSON.parse(localStorage.getItem('profiles') || '');
     console.log(this.nickname);
     console.log(this.password);
 
-    obterDadosDoUsuario.forEach((element: { nickName: string | null; password: string | null; }) => {
-      if(element.nickName == this.nickname && element.password == this.password){
-         this.router.navigate(['/comic/hqlist']);
+    getUserData.forEach((element: { nickName: string | null; password: string | null; }) => {
+      if (element.nickName == this.nickname && element.password == this.password) {
+        this.router.navigate(['/comic/hqlist']);
       }
     });
-  
+
   }
 
   btnLogin() { }
-
-
-
 
 }

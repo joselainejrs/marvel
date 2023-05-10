@@ -1,8 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
-
-import { Dice } from 'src/app/interfaces/dices';
 import { RegisterService } from 'src/app/service/pages/register/register.service';
 
 @Component({
@@ -16,13 +14,12 @@ import { RegisterService } from 'src/app/service/pages/register/register.service
 export class RegisterDiceComponent implements OnInit {
 
   hide = true;
-  dices: Dice[];
 
   constructor(
     private formBuilder: FormBuilder,
     private registerService: RegisterService,
     private router: Router,
-  ) {this.dices = []; }
+  ) {}
 
   registerForm = this.formBuilder.group({
     nickName: ['', Validators.required],
@@ -35,7 +32,7 @@ export class RegisterDiceComponent implements OnInit {
   });
 
 
-  ngOnInit(): void { }
+  ngOnInit(): void {window.scrollTo(0, 0);}
 
   onSubmit() { this.handleData();}
 
