@@ -19,7 +19,7 @@ const routes: Routes = [
   { path: 'register/address', component: RegisterAddressComponent },
   
   { path: 'comic/hqlist', component: HqBooksComponent },
-  { path: 'comic/hqdetails', component: DetailsBooksComponent },
+  { path: 'comic/hqdetails/:id', component: DetailsBooksComponent },
 
   { path: 'profile', component: ProfileComponent },
 

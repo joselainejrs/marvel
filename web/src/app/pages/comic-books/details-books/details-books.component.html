@@ -5,9 +5,39 @@
             <app-title> < Back to Comic Books </app-title>
         </a>
         <div class="details-hq">
-            <app-card-books
-            [listHq]="false"
-            ></app-card-books>
+            <div id="container-card-details" *ngFor="let databyId of IdCharacters;">
+                <img class="img-details" src="{{databyId.thumbnail.path}}.{{databyId.thumbnail.extension}}" alt="Imagem de HQ">
+                <div class="text-details">
+                    <p class="text-topic-details">Ultimate Comics Fallout Facsimile Edition #4</p>
+                    <div class="text-description-details">
+        
+                        <div class="dice-details">
+                            <div class="dice-Published">
+                                <p><span>Published:</span>September 01, 2021</p>
+                                <p><span>Penciler:</span>Ario Anindito</p>
+                            </div>
+                            <div class="dice-Published">
+                                <p class="text-right"><span>Writer:</span>Cavan Scott</p>
+                                <p><span>Cover Artist:</span>Phil Noto</p>
+                            </div>
+                        </div>
+        
+                        <div class="dice">
+                            <span>Descrition</span>
+                            <p>A NEW STORY BEGINS THIS ISSUE – THE SHADOW OF THE NIHIL! Following
+                                the terrible events of The
+                                Rising Storm, the villainous NIHIL are in retreat, hunted by THE JEDI. WAYSEEKER KNIGHT ORLA
+                                JARENI is attacked by a lone Nihil Stormship in deep space, a Stormship commanded by one of
+                                the
+                                Jedi’s own. Which of STARLIGHT BEACON’S number have joined the Nihil Horde? And how far will
+                                they turn from the Light?
+                            </p>
+                        </div>
+        
+                        <p><span class="text-black">Cast:</span>Jedi, Orla Jareni, Starlight Beacon, Avar Kriss</p>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 </div>

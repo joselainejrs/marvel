@@ -43,3 +43,6 @@ testem.log
 # System files
 .DS_Store
 Thumbs.db
+
+# Arquivo de configuração de ambiente
+../src/environment.ts
