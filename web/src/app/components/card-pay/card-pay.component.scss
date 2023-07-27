@@ -1,5 +1,5 @@
 #container-card-pay {
-    width: 45rem;
+    width: 50rem;
     
     background-color: var(--card-backgroud-white);
     box-shadow: 0 0 1em var(--comics);
@@ -28,4 +28,8 @@
 
 #container-card-pay .conteudo-card .information-pay .details-pay .value-hq {
     font: 800 2rem "Roboto Condensed";
+}
+
+#container-card-pay .conteudo-card .information-pay .btn-red {
+   width: 14rem;
 }

@@ -96,11 +96,14 @@ export class DetailsBooksComponent implements OnInit {
   dateUndefined() {
     if (this.penciler === undefined) {
       this.penciler = this.notDate;
-    } else if (this.pencilerCover === undefined) {
+    }
+    if (this.pencilerCover === undefined) {
       this.pencilerCover = this.notDate;
-    } else if (this.writer === undefined) {
+    }
+    if (this.writer === undefined) {
       this.writer = this.notDate;
-    } else {
+    }
+    if (this.Others === undefined) {
       this.Others = this.notDate
     }
   }

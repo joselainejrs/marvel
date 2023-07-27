@@ -17,6 +17,7 @@
 #container-card-details {
     display: flex;
     width: 600px;
+    margin: auto;
     margin-bottom: 30px;
 }
 
@@ -92,4 +93,8 @@
 #container-card-details .text-details .text-description-details p span {
     font-weight: 400;
     padding-right: 5px;
+}
+
+.details-hq .card{
+    margin-left: 9rem;
 }
