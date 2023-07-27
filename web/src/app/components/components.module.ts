@@ -4,18 +4,18 @@ import { HttpClientJsonpModule, HttpClientModule } from '@angular/common/http';
 import { BrowserModule } from '@angular/platform-browser';
 import { RouterModule } from '@angular/router';
 
-import { CardBooksComponent } from './card-books/card-books.component';
+import { CardPayComponent } from './card-pay/card-pay.component';
 import { HeaderComponent } from './header/header.component';
 import { TitleComponent } from './title/title.component';
 
 @NgModule({
   declarations: [
-    CardBooksComponent,
+    CardPayComponent,
     HeaderComponent,
     TitleComponent,
   ],
   exports: [
-    CardBooksComponent,
+    CardPayComponent,
     HeaderComponent,
     TitleComponent,
     ],

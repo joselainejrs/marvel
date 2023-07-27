@@ -14,13 +14,12 @@ export class MarvelService {
   hash = environment.hash;
   baseUrl = environment.baseUrl
 
-
   constructor(private http: HttpClient) { }
 
   //metodo para conectar com a marvel
   //operador = mapp
 
-  getCharacteres() {
+  getCharacteres(): Observable<IMarvelHQS> {
     const params = `comics?ts=1&apikey=${this.publickKey}&hash=${this.hash}`;
     return this.http.get(this.baseUrl + params).pipe(map((data: any) => data.data.results))
   }
@@ -29,6 +28,5 @@ export class MarvelService {
     const paramsId = `comics/${id}?ts=1&apikey=${this.publickKey}&hash=${this.hash}`;
     return this.http.get(this.baseUrl + paramsId).pipe(map((data: any) => data.data.results))
   }
-
 
 }

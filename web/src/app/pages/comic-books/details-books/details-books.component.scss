@@ -11,3 +11,85 @@
 #container-details .details-hq {
     margin: 0 15% 0 15%;
 }
+
+// card de detalhes do comic 
+
+#container-card-details {
+    display: flex;
+    width: 600px;
+    margin-bottom: 30px;
+}
+
+#container-card-details .img-details {
+    width: 18rem;
+    height: 24rem;
+
+    box-shadow: 0em 0.6em 1em var(--comics);
+}
+
+#container-card-details .text-details {
+    text-align: left;
+    margin-left: 40px;
+}
+
+#container-card-details .text-details .text-topic-details{
+    font: 700 1.5rem "Roboto Condensed";
+}
+
+#container-card-details .text-details .text-description-details {
+    font-family: "Inter";
+    // font-size: 1rem;
+
+    padding: 6px 0;
+    width: 500px;
+    // font-weight: 300;
+}
+
+#container-card-details .text-details .text-description-details {  
+    font-size: 14px;  
+}
+
+#container-card-details .text-details .text-description-details 
+.dice-details {
+    padding: 15px 0;
+    display: flex;
+}
+
+#container-card-details .text-details .text-description-details 
+.dice-details p {  
+    font-weight: 200;
+    padding: 8px 10px 0 0;
+}
+
+
+#container-card-details .text-details .text-description-details 
+.dice-details .dice-Published .text-right {  
+    text-align: right;   
+}
+
+#container-card-details .text-details .text-description-details 
+.dice-details span {
+    font-weight: 400;
+    padding-right: 15px;
+}
+
+#container-card-details .text-details .text-description-details .dice span {
+    font-weight: 400;
+}
+
+#container-card-details .text-details .text-description-details .dice p {
+    font-weight: 200;
+    padding: 15px 0;
+    width: 440px;
+    text-align: justify;
+}
+
+#container-card-details .text-details .text-description-details p {
+    font-weight: 200;
+    padding-right: 10px;
+}
+
+#container-card-details .text-details .text-description-details p span {
+    font-weight: 400;
+    padding-right: 5px;
+}
