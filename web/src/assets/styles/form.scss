@@ -45,6 +45,18 @@ input::placeholder, a {
     cursor: pointer;
 }
 
+.btn-red {
+    border-radius: 5px;
+    border: none;
+    height: 55px;
+    background-color: var(--card-button);
+
+    font: 400 1.1rem "Roboto Condensed";
+
+    cursor: pointer;
+
+}
+
 .getColor {
     background-color: var(--card-button);
     border: 1px solid var(--card-button);
@@ -93,4 +105,9 @@ form #icon {
     color: var(--card-icon);
 
     cursor: pointer;
+}
+
+.title {
+    font: 500 1.5rem "Roboto Condensed";
+    color: var(--font-text-black);
 }
