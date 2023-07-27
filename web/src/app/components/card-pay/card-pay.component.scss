@@ -1,107 +1,31 @@
-#container-card-list {
-    text-align: center;
-    width: 330px;
-    margin-bottom: 30px;
+#container-card-pay {
+    width: 45rem;
+    
+    background-color: var(--card-backgroud-white);
+    box-shadow: 0 0 1em var(--comics);
 
-    cursor: pointer;
+    margin: 3rem 0 3rem 0;
+    padding: 2rem;
+
+    box-sizing: border-box;
+
+    border-radius: 10px;
 }
 
-#container-card-list .imgHQ {
-    width: 13rem;
-    height: 18rem;
-
-    margin-right: 19px;
-
-    box-shadow: 0em 0.6em 1em var(--comics);
+#container-card-pay .conteudo-card .information-pay{
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
 }
 
-#container-card-list .text-list {
-    font: 700 1rem "Roboto Condensed";
+#container-card-pay .conteudo-card .information-pay .details-pay h2, .description-pay, .value-hq{
+   text-align: center;
 }
 
-#container-card-list .text-list {
-    text-align: left;
-
-    width: 16rem;
-    margin: 0.8rem 0 0 3.2rem;
+#container-card-pay .conteudo-card .information-pay .details-pay .description-pay {
+    font: 200 12px "Inter";
 }
 
-#container-card-list .text-list .text-topic-list,
-.text-description-list {
-    padding: 6px 0;
+#container-card-pay .conteudo-card .information-pay .details-pay .value-hq {
+    font: 800 2rem "Roboto Condensed";
 }
-
-#container-card-list .text-list .text-description-list {
-    font-weight: 300;
-}
-
-// card de detalhes do comic 
-
-#container-card-details {
-    display: flex;
-    width: 600px;
-    margin-bottom: 30px;
-}
-
-#container-card-details .img-details {
-    width: 18rem;
-    height: 24rem;
-
-    margin-left: 49px;
-
-    box-shadow: 0em 0.6em 1em var(--comics);
-}
-
-#container-card-details .text-details {
-    text-align: left;
-    margin-left: 91px;
-}
-
-#container-card-details .text-details .text-topic-details{
-    font: 700 1.5rem "Roboto Condensed";
-}
-
-#container-card-details .text-details .text-description-details {
-    font-family: "Inter";
-    font-size: 1rem;
-
-    padding: 6px 0;
-    width: 500px;
-    font-weight: 300;
-}
-
-#container-card-details .text-details .text-description-details .dice-details {
-    padding: 15px 0;
-    display: flex;
-}
-
-#container-card-details .text-details .text-description-details .dice-details p {  
-    padding: 8px 10px 0 0;
-}
-
-#container-card-details .text-details .text-description-details .dice-details .dice-Published .text-right {  
-    text-align: right;   
-}
-
-#container-card-details .text-details .text-description-details .dice-details span {
-    font-weight: 500;
-    padding-right: 15px;
-}
-
-#container-card-details .text-details .text-description-details .dice span {
-    font-weight: 500;
-}
-
-#container-card-details .text-details .text-description-details .dice p {
-    padding: 15px 0;
-
-    width: 440px;
-    text-align: justify;
-}
-
-#container-card-details .text-details .text-description-details .text-black {
-    font-weight: 500;
-    padding-right: 10px;
-}
-
-
