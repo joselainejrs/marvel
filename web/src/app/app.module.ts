@@ -14,6 +14,7 @@ import { CommonModule } from '@angular/common';
 import { PagesModule } from './pages/pages.module';
 import { ServiceModule } from './service/service.module';
 import { ComponentModule } from './components/components.module';
+import { ModalsModule } from './components/modals/modals.module';
 
 @NgModule({
   declarations: [
@@ -23,11 +24,13 @@ import { ComponentModule } from './components/components.module';
     ComponentModule,
     PagesModule,
     ServiceModule,
+    ModalsModule,
   ],  
   imports: [
     ComponentModule,
     PagesModule,
     ServiceModule,
+    ModalsModule,
     
     BrowserModule,
     CommonModule,
