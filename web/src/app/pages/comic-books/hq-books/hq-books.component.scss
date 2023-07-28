@@ -4,18 +4,19 @@
     height: 100vh;
 }
 
+.container-hqs {
+    width: 100%;
+}
+
 .container-hqs .repet-hq {
-    margin: 0 9% 0 9%;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 #container-card-list {
     margin-bottom: 30px;
-    grid-area: content;
     display: grid;
-    grid-template-columns: 214px 214px 214px 214px;
-    align-items: center;
-    justify-content: center;
-
+    grid-template-columns: 19rem 19rem 19rem 18rem;
     cursor: pointer;
 }
 
@@ -24,20 +25,17 @@
 }
 
 #container-card-list .data-together .imgHQ {
-    width: 11rem;
-    height: 14rem;
+    width: 17rem;
+    height: 27rem;
 
     box-shadow: 0em 0.6em 1em var(--comics);
 }
 
 #container-card-list .text-list {
-    font: 700 12px "Roboto Condensed";
-}
-
-#container-card-list .text-list {
+    width: 17rem;
     text-align: left;
-    width: 11rem;
     margin-bottom: 10px;
+    font: 700 16px "Roboto Condensed";
 }
 
 #container-card-list .text-list .text-topic-list,

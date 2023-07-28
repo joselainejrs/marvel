@@ -1,0 +1,42 @@
+.modal {
+    background-color: var(--card-backgroud-white);
+    border-radius: 8px;
+    box-shadow: 0 2px 8px var(--box-shadow);
+    border: 1px solid #888;
+
+    margin: auto;
+    margin-top: 10rem;
+    padding: 20px;
+    width: 31rem;
+    height: 11rem;
+
+}
+
+.modal .material-symbols-outlined {
+    font-weight: 700;
+    color: var(--font-text-red);
+    float: right;
+    position: relative;
+    bottom: 12px;
+
+    cursor: pointer;
+}
+
+.modal .conteudo-card {
+    margin-top: 16px;
+}
+
+.modal .conteudo-card p {
+    font: 200 18px "Roboto Condensed";
+    color: var(--font-text-black);
+    text-align: center;
+}
+
+.modal .conteudo-card .group-btn {
+    margin: 15px;
+}
+
+.modal .conteudo-card .group-btn button {
+    width: 12rem;
+    margin: 5px;
+}

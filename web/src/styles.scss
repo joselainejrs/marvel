@@ -10,16 +10,23 @@
 }
 
 :root{
+    --backgroud: #F8F6F6;
+    --backgroud-preto-light: rgb(0, 0, 0);
+    --backgroud-preto-light-opacity: rgba(0, 0, 0, 0.4);
+    --bar-higher: #272827;
+    --bordas-gray-light: #888
+    --box-shadow: #333;
     --card-backgroud: #181B19;
     --card-backgroud-white: #F7F8FA;
     --card-text: #F7F8FA;
     --card-button: #ED1D24;
+    --card-button-white: #F7F8FA;
     --card-input: #979797;
     --card-icon: #F7F8FA;
     --card-gradient: #F7F8FA;
+    --color-black: #181B19;
+    --comics: rgba(0, 0, 0, 0.27), 0px 2.27px 3.12px rgba(0, 0, 0, 0.215913), 0px 4.84px 10.0172px rgba(0, 0, 0, 0.169756), 0px -0.42211px 3.62304px rgba(0, 0, 0, 0.115395);
     --font-text-white: #fff;
     --font-text-black: #000;
-    --comics: rgba(0, 0, 0, 0.27), 0px 2.27px 3.12px rgba(0, 0, 0, 0.215913), 0px 4.84px 10.0172px rgba(0, 0, 0, 0.169756), 0px -0.42211px 3.62304px rgba(0, 0, 0, 0.115395);
-    --bar-higher: #272827;
-    --backgroud: #F8F6F6;
+    --font-text-red: #ED1D24;
 }

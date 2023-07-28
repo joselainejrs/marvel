@@ -7,6 +7,7 @@ import { RouterModule } from '@angular/router';
 import { CardPayComponent } from './card-pay/card-pay.component';
 import { HeaderComponent } from './header/header.component';
 import { TitleComponent } from './title/title.component';
+import { ModalsModule } from './modals/modals.module';
 
 @NgModule({
   declarations: [
@@ -25,6 +26,7 @@ import { TitleComponent } from './title/title.component';
     BrowserModule,
     HttpClientModule,
     HttpClientJsonpModule,
+    ModalsModule
   ]
 })
 export class ComponentModule { }

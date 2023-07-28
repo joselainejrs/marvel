@@ -8,7 +8,7 @@ import { RegisterService } from 'src/app/service/pages/register/register.service
   templateUrl: './register-dice.component.html',
   styleUrls: [
     './register-dice.component.scss',
-    '../../../../assets/styles/form.scss'
+    '../../../../assets/styles/global.scss'
   ]
 })
 export class RegisterDiceComponent implements OnInit {

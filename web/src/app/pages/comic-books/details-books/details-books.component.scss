@@ -4,32 +4,36 @@
     height: 100vh;
 }
 
+#container-details{
+    width: 100%;
+}
+
 #container-details a {
     text-decoration: none;
 }
 
 #container-details .details-hq {
-    margin: 0 15% 0 15%;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 // card de detalhes do comic 
 
 #container-card-details {
     display: flex;
-    width: 600px;
-    margin: auto;
+    margin: auto 2rem;
     margin-bottom: 30px;
+    justify-content: center;
 }
 
 #container-card-details .img-details {
-    width: 18rem;
-    height: 24rem;
+    width: 22rem;
+    height: 28rem;
 
     box-shadow: 0em 0.6em 1em var(--comics);
 }
 
 #container-card-details .text-details {
-    text-align: left;
     margin-left: 40px;
 }
 
@@ -39,11 +43,8 @@
 
 #container-card-details .text-details .text-description-details {
     font-family: "Inter";
-    // font-size: 1rem;
-
     padding: 6px 0;
     width: 500px;
-    // font-weight: 300;
 }
 
 #container-card-details .text-details .text-description-details {  
@@ -64,9 +65,10 @@
 
 
 #container-card-details .text-details .text-description-details 
-.dice-details .dice-Published .text-right {  
-    text-align: right;   
+.dice-details .dice-space {  
+    width: 16rem;
 }
+
 
 #container-card-details .text-details .text-description-details 
 .dice-details span {
@@ -81,7 +83,6 @@
 #container-card-details .text-details .text-description-details .dice p {
     font-weight: 200;
     padding: 15px 0;
-    width: 440px;
     text-align: justify;
 }
 
@@ -95,6 +96,3 @@
     padding-right: 5px;
 }
 
-.details-hq .card{
-    margin-left: 9rem;
-}

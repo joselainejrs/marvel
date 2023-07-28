@@ -5,7 +5,7 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './title.component.html',
   styleUrls: [
     './title.component.scss',
-    '../../../assets/styles/form.scss'
+    '../../../assets/styles/global.scss'
   ]
 })
 export class TitleComponent implements OnInit {

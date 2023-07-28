@@ -6,8 +6,14 @@
                 <p class="description-pay">Read online or on your iPhone, iPad, Addresss or Android Device</p>
                 <p class="value-hq">$3.99</p>
             </div>
-            <button class="btn-red"> Buy Digital Issue</button>
+            <button type="button" class="btn-red" (click)="openModal()"> Buy Digital Issue</button>
         </div>
-       
     </div>
+</div>
+
+<div class="modal-Action" *ngIf="openModalAction">
+    <app-modal-action
+    (openClose)="closeModal()"
+    >
+</app-modal-action>
 </div>

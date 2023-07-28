@@ -9,7 +9,7 @@ import { RegisterService } from 'src/app/service/pages/register/register.service
   templateUrl: './register-payment.component.html',
   styleUrls: [
     './register-payment.component.scss',
-    '../../../../assets/styles/form.scss'
+    '../../../../assets/styles/global.scss'
   ]
 })
 export class RegisterPaymentComponent implements OnInit {
