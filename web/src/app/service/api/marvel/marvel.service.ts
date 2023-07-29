@@ -3,16 +3,16 @@ import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
 import { IMarvelHQS } from 'src/app/interfaces/marvel';
-import { environment } from 'src/environments/environment';
+import { apiMarvel } from 'src/environments/env';
 
 
 @Injectable({
   providedIn: 'root'
 })
 export class MarvelService {
-  publickKey = environment.publickKey;
-  hash = environment.hash;
-  baseUrl = environment.baseUrl
+  publickKey = apiMarvel.publickKey;
+  hash = apiMarvel.hash;
+  baseUrl = apiMarvel.baseUrl
 
   constructor(private http: HttpClient) { }
 

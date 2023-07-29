@@ -3,8 +3,13 @@ import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
 
 import { AppModule } from './app/app.module';
 import { environment } from './environments/environment';
+import { apiMarvel} from './environments/env';
 
 if (environment.production) {
+  enableProdMode();
+}
+
+if (apiMarvel.production) {
   enableProdMode();
 }
 
