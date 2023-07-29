@@ -5,9 +5,57 @@
     border: 1px solid #888;
 
     margin: auto;
-    margin-top: 10rem;
     padding: 20px;
-    width: 31rem;
-    height: 11rem;
+    width: 29rem;
+}
 
+.modal .material-symbols-outlined {
+    font-weight: 700;
+    color: var(--font-text-red);
+    // float: right;
+    position: absolute;
+    right: 35rem;
+
+    cursor: pointer;
+}
+
+legend {
+    color: var(--font-text-black) !important;
+
+}
+
+#container-rgt-payment .conteudo-rgt-payment {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+}
+
+#container-rgt-payment .conteudo-rgt-payment form .data-input{
+    background-color: var(--card-backgroud-white);
+    color: var(--font-text-black) !important;
+    margin: 8px auto;
+}
+
+input::placeholder {
+    color: var(--font-text-black) !important;
+}
+
+#container-rgt-payment .conteudo-rgt-payment .input-together {
+    width: 8.9rem;
+}
+
+#container-rgt-payment .conteudo-rgt-payment .input-together-payment {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    margin: auto;
+
+    width: 18.5rem;
+}
+
+#container-rgt-payment .conteudo-rgt-payment .btn {
+    margin: 20px 0 14px 4px !important;
+    color: var(--font-text-black) !important;
 }

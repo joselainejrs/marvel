@@ -14,5 +14,7 @@
 </div>
 
 <ng-container *ngIf="modalPay">
-    <app-modal-pay></app-modal-pay>
+    <app-modal-pay 
+        (openClosePay)="closeModal()">
+    </app-modal-pay>
 </ng-container>

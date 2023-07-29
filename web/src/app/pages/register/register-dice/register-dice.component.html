@@ -8,30 +8,20 @@
                     type="text" 
                     placeholder="Nickname" 
                     formControlName="nickName" 
-                    class="dados-input">
-                <!-- <input 
-                    type="text" 
-                    placeholder="First Name" 
-                    formControlName="firstName" 
-                    class="dados-input">
-                <input 
-                    type="text" 
-                    placeholder="Last Name" 
-                    formControlName="lastName" 
-                    class="dados-input"> -->
+                    class="data-input">
                 <input 
                     type="email" 
                     placeholder="E-Mail" 
                     formControlName="email" 
-                    class="dados-input">
+                    class="data-input">
                     
                     <div>
                         <input 
                         type="text" 
                         placeholder="Contact" 
                         formControlName="contact" 
-                        mask="(00) 0000-0000" 
-                        class="dados-input">
+                        mask="(00) 00000-0000" 
+                        class="data-input">
                         
                     <div class="checkbox" >
                         <label class="text-checkbox" for="check" >Contact also on WhatsApp</label>
@@ -43,7 +33,7 @@
                     placeholder="Password" 
                     [type]="hide ? 'password' : 'text'" 
                     formControlName="password" 
-                    class="dados-input"> 
+                    class="data-input"> 
 
                 <span class="material-icons" id="icon" (click)="hide = !hide">
                     {{hide ? 'visibility' : 'visibility_off'}}

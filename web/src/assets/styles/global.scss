@@ -9,7 +9,7 @@ legend, a, button, input {
     color: var(--font-text-white);
 }
 
-form .dados-input {
+form .data-input {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -41,6 +41,8 @@ input::placeholder, a {
     height: 2.5rem;
 
     margin: auto 25px 25px;
+    
+    font: 400 1.1rem "Roboto Condensed";
 
     cursor: pointer;
 }
@@ -128,7 +130,7 @@ form #icon {
 #base-modal {
     position: fixed;
     z-index: 1;
-    padding-top: 100px;
+    padding-top: 38px;
     left: 0;
     top: 0;
     width: 100%;

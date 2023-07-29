@@ -6,12 +6,13 @@
                 <legend>Login</legend>
                 <div>
                     <input 
-                        type="text" 
-                        placeholder="Nickname" 
-                        formControlName="nickname" 
-                        name="nickname" 
-                        class="dados-input"
-                        required
+                    type="text" 
+                    placeholder="Nickname" 
+                    formControlName="nickname" 
+                    name="nickname" 
+                    id="nickname" 
+                    class="data-input"
+                    required
                     >
                 </div>
 
@@ -22,7 +23,7 @@
                         [type]="hide ? 'password' : 'text'"
                         formControlName="password" 
                         name="password" 
-                        class="dados-input"
+                        class="data-input"
                         required
                     >
                     <span 

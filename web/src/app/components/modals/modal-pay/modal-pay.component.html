@@ -1,15 +1,59 @@
 <div id="base-modal">
     <div class="modal">
         <div>
-            <!-- <span class="material-symbols-outlined" (click)="eventBtnModal()">close</span> -->
+            <span class="material-symbols-outlined" (click)="eventBtnModal()">close</span>
         </div>
         <div class="conteudo-card">
-            <p class="description">want to complete the purchase</p>
-            <div class="group-btn">
-                <!-- <button type="button" class="btn-white" (click)="eventBtnModal()">Cancel</button>
-                <button type="button" class="btn-red" (click)="openModal()">Go to payment</button> -->
+                <article id="container-rgt-payment">
+                    <section class="conteudo-rgt-payment">
+                        <form id="" [formGroup]="registerPaymentForm" (ngSubmit)="onSubmit()">
+                            <legend>Payment Data</legend>
+                            <input 
+                                type="text" 
+                                placeholder="Card Number" 
+                                formControlName="cardNumber"
+                                mask="0000 0000 0000 0000" 
+                                class="data-input">
+
+                            <div class="input-together-data">
+                                <input 
+                                    type="text" 
+                                    placeholder="Validity" 
+                                    formControlName="validity" 
+                                    mask="00/00"
+                                    class="data-input input-together"
+                                >
+                                <input 
+                                    type="text" 
+                                    placeholder="CVV" 
+                                    formControlName="cvv" 
+                                    maxlength="3"
+                                    class="data-input input-together"
+                                >
+                            </div>
+                            <input 
+                                type="text" 
+                                placeholder="Cardholder Name" 
+                                formControlName="cardholderName"
+                                class="data-input">
+                            <input 
+                                type="text" 
+                                placeholder="CPF of the Holder" 
+                                formControlName="cpf"
+                                mask="000.000.000-00" 
+                                class="data-input">
+
+                            <button 
+                                type="submit" 
+                                [disabled]="!registerPaymentForm.valid" 
+                                (click)="btnContinue()"
+                                class="btn" 
+                                [ngClass]="{ 'getColor' : registerPaymentForm.valid }">
+                                Continue
+                            </button>
+                        </form>
+                    </section>
+                </article>
             </div>
         </div>
-    </div>
 </div>
-

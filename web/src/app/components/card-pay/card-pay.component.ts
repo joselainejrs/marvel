@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { MarvelStorageService } from 'src/app/service/api/marvel/marvel-storage.service';
+import { MarvelService } from 'src/app/service/api/marvel/marvel.service';
 @Component({
   selector: 'app-card-pay',
   templateUrl: './card-pay.component.html',
@@ -11,11 +13,12 @@ import { Router } from '@angular/router';
 
 export class CardPayComponent implements OnInit {
   openModalAction: boolean;
+  price: any
 
-  constructor(private router: Router) { }
+  constructor(private apiMarvelStorageService: MarvelStorageService) { }
 
   ngOnInit(): void {
-    console.log('oie')
+    this.priceId();
   }
 
   openModal(){
@@ -27,6 +30,13 @@ export class CardPayComponent implements OnInit {
     console.log('entrou')
     this.openModalAction = false;
   }
+
+  priceId(){
+    setTimeout(() => {
+      this.price = this.apiMarvelStorageService.getPriceCharacter();
+    }, 1000);
+  }
+
 
   
 }

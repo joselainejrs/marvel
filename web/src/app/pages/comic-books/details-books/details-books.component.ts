@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { ICreators } from 'src/app/interfaces/marvel';
+import { MarvelStorageService } from 'src/app/service/api/marvel/marvel-storage.service';
 import { MarvelService } from 'src/app/service/api/marvel/marvel.service';
 
 @Component({
@@ -13,6 +13,7 @@ export class DetailsBooksComponent implements OnInit {
   date: any;
   writer: string;
   Others: string;
+  formatValue: any
   penciler: string;
   IdCharacters: any;
   pencilerCover: string;
@@ -20,7 +21,8 @@ export class DetailsBooksComponent implements OnInit {
 
   constructor(
     private activatedRoute: ActivatedRoute,
-    private apiMarvelservice: MarvelService
+    private apiMarvelservice: MarvelService,
+    private apiMarvelStorageService: MarvelStorageService,
   ) { }
 
   ngOnInit(): void {
@@ -34,8 +36,10 @@ export class DetailsBooksComponent implements OnInit {
           this.IdCharacters = resp
           const date = this.IdCharacters[0].dates;
           const creators = this.IdCharacters[0].creators.items;
+          const price = this.IdCharacters[0].prices;
 
           this.treatmentDate(date);
+          this.pricesCharacteres(price);
           this.treatmentCreate(creators);
 
         },
@@ -105,6 +109,19 @@ export class DetailsBooksComponent implements OnInit {
     }
     if (this.Others === undefined) {
       this.Others = this.notDate
+    }
+  }
+
+  pricesCharacteres(currency: any) {
+    for (let index in currency) {
+      const value = currency[index];
+
+      if (value.type === "printPrice") {
+        this.formatValue = new Intl.NumberFormat('de-DE', { style: 'currency', currency: 'EUR' })
+        .format(value.price)
+
+        return this.apiMarvelStorageService.setPriceCharacter(this.formatValue);
+      }
     }
   }
 
