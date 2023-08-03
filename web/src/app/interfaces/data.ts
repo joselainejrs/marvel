@@ -1,4 +1,4 @@
-export interface IDice{
+export interface IDice {
         id: any,
         nickName: string,
         email: string,

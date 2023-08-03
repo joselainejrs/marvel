@@ -55,8 +55,8 @@ export class RegisterService implements OnInit {
 
   setDataNew() {
     if (localStorage.hasOwnProperty('profile')) {
-      this.profiles = localStorage.getItem("profile")
-      JSON.parse(this.profiles)
+      this.profiles = localStorage.getItem("profile");
+      JSON.parse(this.profiles);
     }
 
     const profileNew: IDice = {
@@ -75,7 +75,6 @@ export class RegisterService implements OnInit {
     };
 
     this.profiles.push(profileNew)
-    this.registerStorageService.setIdUser(this.id)
     localStorage.setItem('profiles', JSON.stringify(this.profiles));
   }
 

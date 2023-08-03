@@ -1,6 +1,8 @@
-import { Component, EventEmitter, OnInit, Output } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { FormBuilder, Validators } from '@angular/forms';
 import { PaymentService } from 'src/app/service/pages/payment/payment.service';
+import { RegisterService } from 'src/app/service/pages/register/register.service';
+
 @Component({
   selector: 'app-modal-pay',
   templateUrl: './modal-pay.component.html',
@@ -10,6 +12,7 @@ import { PaymentService } from 'src/app/service/pages/payment/payment.service';
   ]
 })
 export class ModalPayComponent implements OnInit {
+  @Input() modalPay = true;
   @Output() openClosePay = new EventEmitter()
 
   constructor(
@@ -22,27 +25,25 @@ export class ModalPayComponent implements OnInit {
     validity: ['', Validators.required],
     cvv: ['', Validators.required],
     cardholderName: ['', Validators.required],
-    cpf: [null, Validators.required],
+    cpf: ['', Validators.required],
   });
 
-  ngOnInit(): void {
-  }
+  ngOnInit(): void {}
 
   eventBtnModal() {
     this.openClosePay.emit();
   }
 
-  onSubmit() {
-    this.handleData(); 
+  onSubmit() { this.handleData(); }
+
+  btnContinue() {
+    this.handleData();
     this.paymentService.setDataPaymentNew();
+  
   }
 
   handleData() {
-    console.log('entrou no handleData')
-
     const setPaymentDice = {
-      amount: "100.5",
-      iframe: true,
       cardNumber: this.registerPaymentForm.get('cardNumber')?.value,
       validity: this.registerPaymentForm.get('validity')?.value,
       cvv: this.registerPaymentForm.get('cvv')?.value,
@@ -51,6 +52,7 @@ export class ModalPayComponent implements OnInit {
     }
 
     this.paymentService.setPayment(setPaymentDice);
+    this.openClosePay.emit();
   }
 
 }

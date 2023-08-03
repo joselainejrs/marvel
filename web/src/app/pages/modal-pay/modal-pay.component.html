@@ -46,6 +46,7 @@
                             <button 
                                 type="submit" 
                                 [disabled]="!registerPaymentForm.valid" 
+                                (click)="btnContinue()"
                                 class="btn" 
                                 [ngClass]="{ 'getColor' : registerPaymentForm.valid }">
                                 Continue
@@ -55,4 +56,4 @@
                 </article>
             </div>
         </div>
-</div>
+    </div>

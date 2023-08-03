@@ -9,7 +9,7 @@ import { Component, EventEmitter, OnInit, Output } from '@angular/core';
   ]
 })
 export class ModalActionComponent implements OnInit {
-  modalPay: boolean;
+  openCloseModalPay: boolean;
   @Output() openClose = new EventEmitter()
 
   constructor() { }
@@ -22,11 +22,11 @@ export class ModalActionComponent implements OnInit {
   }
 
   openModal(){
-    this.modalPay = true;
+    this.openCloseModalPay = true;
   }
 
   closeModal(){
-    this.modalPay = false;
+    this.openCloseModalPay = false;
     this. eventBtnModal();
     }
 

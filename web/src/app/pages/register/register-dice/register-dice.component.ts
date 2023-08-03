@@ -34,37 +34,17 @@ export class RegisterDiceComponent implements OnInit {
 
   onSubmit() { this.handleData();}
 
-  btnContinue() {
-    this.handleData();
-    // this.router.navigate(['register/payment']) 
-  }
-
   handleData(){
     
     const setFormDice = {
       nickName: this.registerForm.get('nickName')?.value,
-      // firstName: this.registerForm.get('firstName')?.value,
-      // lastName: this.registerForm.get('lastName')?.value,
       email: this.registerForm.get('email')?.value,
       contact: this.registerForm.get('contact')?.value,
       check: this.registerForm.get('check')?.value,
       password: this.registerForm.get('password')?.value,
     }
      this.registerService.setDice(setFormDice);
-     this.router.navigate(['/register/address']) 
-
-    //criação de um número para ID
-    // 
-
-    // // pega todos os valores do input
-    // const dice: Dice = this.registerForm.value
-
-    // //
-
-    // //
-    
-    // this.accessService.setData(this.dices);
-    
+     this.router.navigate(['/register/address']);    
   }
 
 }

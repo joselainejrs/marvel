@@ -1,14 +1,12 @@
 import { Injectable } from '@angular/core';
 import { IPayment } from 'src/app/interfaces/data';
 import { MarvelStorageService } from '../../api/marvel/marvel-storage.service';
-import { RegisterStorageService } from '../register/register-storage.service';
-
 
 @Injectable({
   providedIn: 'root'
 })
 export class PaymentService {
-  payment: any = []
+  payment: any = [];
   cardNumber = '';
   validity = '';
   cvv = '';
@@ -17,7 +15,6 @@ export class PaymentService {
 
   constructor(
     private apiMarvelStorageService: MarvelStorageService,
-    private registerStorageService: RegisterStorageService
   ) { }
 
   setPayment(Dice: any) {
@@ -29,23 +26,22 @@ export class PaymentService {
   }
 
   setDataPaymentNew() {
-    if (localStorage.hasOwnProperty('dataPayment')) {
-      this.payment = localStorage.getItem("dataPayment")
-      JSON.parse(this.payment)
-    }
+    // console.log('set')
+    // if (localStorage.hasOwnProperty('dataPayment')) {
+    //   this.payment = localStorage.getItem("dataPayment");
+    //   JSON.parse(this.payment);
+    // }
 
     const paymentNew: IPayment = {
-      // idData: this.registerStorageService.getIdUser(),
-      cardNumber: this.cardNumber,
-      validity: this.validity,
       cvv: this.cvv,
-      cardholderName: this.cardholderName,
       cpf: this.cpf,
+      validity: this.validity,
+      cardNumber: this.cardNumber,
+      cardholderName: this.cardholderName,
       price: this.apiMarvelStorageService.getPriceCharacter()
-    };
+    }
 
     this.payment.push(paymentNew)
-    console.log(this.payment);
     localStorage.setItem('dataPayment', JSON.stringify(this.payment));
   }
 

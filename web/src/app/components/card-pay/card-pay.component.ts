@@ -11,8 +11,8 @@ import { MarvelStorageService } from 'src/app/service/api/marvel/marvel-storage.
 })
 
 export class CardPayComponent implements OnInit {
+  price: any;
   openModalAction: boolean;
-  price: any
 
   constructor(private apiMarvelStorageService: MarvelStorageService) { }
 
