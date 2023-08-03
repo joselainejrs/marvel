@@ -59,7 +59,7 @@ input[type=checkbox]::after{
 
 input[type=checkbox]:checked{
     content: url('../../../../assets/img/check_white.svg');
-    background-color: darkgrey;
+    background-color: var(--color-green);
 }
 
 input[type=checkbox]:checked:after{

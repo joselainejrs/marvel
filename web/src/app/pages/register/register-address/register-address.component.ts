@@ -13,28 +13,26 @@ import { RegisterService } from 'src/app/service/pages/register/register.service
 })
 export class RegisterAddressComponent implements OnInit {
 
-
   constructor(
     private formBuilder: FormBuilder,
     private registerService: RegisterService,
     private router: Router
-  ) {}
+  ) { }
 
   registerAddressForm = this.formBuilder.group({
-    id: [''],
-    cep: ['', Validators.required,],
+    cep: ['', Validators.required],
     address: ['', Validators.required],
     no: ['', Validators.required],
-    complement: ['', Validators.required],
+    complement: [''],
     district: [null, Validators.required],
     city: [null, Validators.required],
   });
 
-  ngOnInit(): void { window.scrollTo(0, 0);}
+  ngOnInit(): void { window.scrollTo(0, 0); }
 
   onSubmit(): void {
-    // console.log(this.registerAddressForm.controls);
-    // this.handleData();
+    this.handleData();
+    this.registerService.setDataNew();
   }
 
   valueCep() {
@@ -67,12 +65,7 @@ export class RegisterAddressComponent implements OnInit {
     })
   }
 
-  btnContinue() {
-    this.handleData();
-    this.registerService.setDataNew();
-  }
-
-  handleData(){
+  handleData() {
     const setFormAddress = {
       cep: this.registerAddressForm.get('cep')?.value,
       address: this.registerAddressForm.get('address')?.value,

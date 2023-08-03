@@ -8,17 +8,20 @@ import { CardPayComponent } from './card-pay/card-pay.component';
 import { HeaderComponent } from './header/header.component';
 import { TitleComponent } from './title/title.component';
 import { ModalsModule } from './modals/modals.module';
+import { NotificationComponent } from './notification/notification.component';
 
 @NgModule({
   declarations: [
-    CardPayComponent,
-    HeaderComponent,
     TitleComponent,
+    HeaderComponent,
+    CardPayComponent,
+    NotificationComponent,
   ],
   exports: [
-    CardPayComponent,
-    HeaderComponent,
     TitleComponent,
+    HeaderComponent,
+    CardPayComponent,
+    NotificationComponent,
     ],
   imports: [
     CommonModule,

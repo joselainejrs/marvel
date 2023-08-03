@@ -1,7 +1,8 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable, OnInit } from '@angular/core';
 import { Guid } from 'guid-typescript';
-import { Dice } from 'src/app/interfaces/dices';
+import { IDice } from 'src/app/interfaces/data';
+import { RegisterStorageService } from './register-storage.service';
 
 
 @Injectable({
@@ -16,7 +17,6 @@ export class RegisterService implements OnInit {
   email = '';
   contact = '';
   check = '';
-
   password = '';
   cep = '';
   address = '';
@@ -25,15 +25,17 @@ export class RegisterService implements OnInit {
   district = '';
   city = '';
 
-  constructor(private http: HttpClient) { }
+  constructor(
+    private http: HttpClient,
+    private registerStorageService: RegisterStorageService
+  ) { }
 
-  ngOnInit(): void {}
+  ngOnInit(): void { }
 
   getCep(cep: string) {
     return this.http.get(`https://viacep.com.br/ws/${cep}/json`);
   }
 
-  //set da dices
   setDice(Dice: any) {
     this.nickName = Dice.nickName;
     this.email = Dice.email;
@@ -56,8 +58,8 @@ export class RegisterService implements OnInit {
       this.profiles = localStorage.getItem("profile")
       JSON.parse(this.profiles)
     }
- 
-    const profileNew = {
+
+    const profileNew: IDice = {
       id: this.id = Guid.create().toString(),
       nickName: this.nickName,
       email: this.email,
@@ -73,9 +75,8 @@ export class RegisterService implements OnInit {
     };
 
     this.profiles.push(profileNew)
-    console.log(this.profiles);
+    this.registerStorageService.setIdUser(this.id)
     localStorage.setItem('profiles', JSON.stringify(this.profiles));
   }
-  // modelo de cadastro 
-  // https://pt.stackoverflow.com/questions/282406/append-javascript
+
 }

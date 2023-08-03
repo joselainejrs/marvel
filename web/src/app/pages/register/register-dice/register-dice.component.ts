@@ -23,11 +23,9 @@ export class RegisterDiceComponent implements OnInit {
 
   registerForm = this.formBuilder.group({
     nickName: ['', Validators.required],
-    // firstName: ['', Validators.required],
-    // lastName: ['', Validators.required],
     email: ['', Validators.required],
     contact: [null, Validators.required],
-    check: ['', Validators.required],
+    check: [false],
     password: ['', Validators.required],
   });
 

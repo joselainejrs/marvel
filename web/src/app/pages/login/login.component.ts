@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { AbstractControl, FormBuilder, Validators } from '@angular/forms';
+import { FormBuilder, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 
 @Component({
@@ -11,8 +11,8 @@ import { Router } from '@angular/router';
   ]
 })
 export class LoginComponent implements OnInit {
-
   hide = true;
+  textNotification = false;
 
   loginForm = this.formBuilder.group({
     nickname: ['', Validators.required],
@@ -22,7 +22,6 @@ export class LoginComponent implements OnInit {
   constructor(
     private formBuilder: FormBuilder,
     private router: Router,
-
   ) { }
 
   get nickname() { return this.loginForm.get('nickname')?.value; }
@@ -33,12 +32,13 @@ export class LoginComponent implements OnInit {
 
   onSubmit() {
     let getUserData = JSON.parse(localStorage.getItem('profiles') || '');
-    console.log(this.nickname);
-    console.log(this.password);
 
     getUserData.forEach((element: { nickName: string | null; password: string | null; }) => {
       if (element.nickName == this.nickname && element.password == this.password) {
         this.router.navigate(['/comic/hqlist']);
+      }else{
+        console.log('entrou')
+        this.textNotification = true
       }
     });
 

@@ -1,16 +1,9 @@
-export interface Dice{
+export interface IDice{
         id: any,
         nickName: string,
-        // firstName: string,
-        // lastName: string,
         email: string,
         contact: string,
         check: string,
-        // cardNumber: string,
-        // validity: string,
-        // cvv: string,
-        // cardholderName: string,
-        // cpf: string,
         password: string,
         cep: string,
         address: string,
@@ -18,4 +11,13 @@ export interface Dice{
         complement: string,
         district: string,
         city: string,
+}
+export interface IPayment {
+        // idData: string,
+        cardNumber: string,
+        validity: string,
+        cvv: string,
+        cardholderName: string,
+        cpf: string,
+        price: string
 }

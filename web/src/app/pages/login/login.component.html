@@ -43,6 +43,10 @@
                     Enter
                 </button>
 
+                <app-notification *ngIf="textNotification">
+                    <p class="textNotification">Unregistered username or password</p>
+                </app-notification>
+
                 <a [routerLink]="['/register/dice']">Register > </a>
             </form>
         </section>

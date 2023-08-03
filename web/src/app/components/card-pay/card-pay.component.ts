@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
 import { MarvelStorageService } from 'src/app/service/api/marvel/marvel-storage.service';
-import { MarvelService } from 'src/app/service/api/marvel/marvel.service';
+
 @Component({
   selector: 'app-card-pay',
   templateUrl: './card-pay.component.html',
