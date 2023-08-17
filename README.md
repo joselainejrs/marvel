@@ -13,11 +13,11 @@ Um projeto evolutivo para o meu aprendizado no mundo da programação WEB
 $ npm install -g @angular/cli
 ```
 
-######  Execute o aplicativo
+####  Execute o aplicativo
 ```
 $ npm run start
 ```
-######  Execute as dependências
+####  Execute as dependências
 ```
 $ npm i guid-typescript --save
 $ npm install --save ngx-mask
