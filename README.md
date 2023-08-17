@@ -6,18 +6,18 @@
 Um projeto evolutivo para o meu aprendizado no mundo da programação WEB
 </h4>
 
-## Installation
+## Instalação
 
 #### Web
 ```
 $ npm install -g @angular/cli
 ```
 
-######  Run the application
+######  Execute o aplicativo
 ```
 $ npm run start
 ```
-######  Run the Dependencies 
+######  Execute as dependências
 ```
 $ npm i guid-typescript --save
 $ npm install --save ngx-mask
