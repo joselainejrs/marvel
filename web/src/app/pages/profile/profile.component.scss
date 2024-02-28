@@ -1,0 +1,39 @@
+#container-profile {
+    max-width: 1200px;
+}
+
+#container-profile,
+#container-profile .my-comics,
+table {
+    text-align: center;
+    margin: 0 auto;
+}
+
+#container-profile h2 {
+    margin: 5rem 0 2rem 0;
+    font-weight: bold;
+}
+
+#container-profile .content-personal {
+    font: 700 1.5rem "Roboto Condensed";
+}
+
+#container-profile .content-personal .personal p {
+    font-weight: 200;
+    padding-right: 6px;
+    margin-top: 12px;
+}
+
+#container-profile .content-personal .personal span {
+    font-weight: 400;
+    padding-right: 6px;
+}
+
+#container-profile .content-personal .personal .others-data .email-contact {
+    display: flex;
+    justify-content: center;
+}
+
+#container-profile .content-personal .personal .others-data .email-contact .email {
+    padding-right: 40px;
+}

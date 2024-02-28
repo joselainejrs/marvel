@@ -3,15 +3,16 @@ export interface IDice {
         nickName: string,
         email: string,
         contact: string,
-        check: string,
+        check: string, //boolean
         password: string,
         cep: string,
         address: string,
-        no: string,
+        no: string, //number
         complement: string,
         district: string,
         city: string,
 }
+
 export interface IPayment {
         // idData: string,
         cardNumber: string,

@@ -1,1 +1,45 @@
-<p>profile works!</p>
+<div id="backgroud">
+    <app-header></app-header>
+    <section id="container-profile">
+        <div class="content-personal">
+            <div class="personal">
+                <h2 class="title">Personal Data</h2>
+                <div class="name">
+                    <p> <span>Nikename:</span>{{ profiles.nickName }}</p>
+                </div>
+                <div class="others-data">
+    
+                    <div class="email-contact">
+                        <div class="email">
+                            <p><span>Email:</span>{{profiles.email}}</p>
+                        </div>
+                        <div class="contact">
+                            <p><span>Contact:</span>{{profiles.contact}}</p>
+                        </div>
+                    </div>
+    
+                    <div class="adress">
+                        <p><span>Address:</span>{{profiles.address}} {{profiles.no}} {{profiles.complement}}, {{profiles.city}} - {{profiles.district}}, {{profiles.cep}} </p>
+                    </div>
+    
+                </div>
+            </div>
+            <div class="my-comics">
+                <h2 class="title">My comics</h2>
+                <!-- tabela dinamica que vai receber as informaçaos da api -->
+                <table>
+                    <tr>
+                      <th>Name HQ</th>
+                      <th>Amount paid</th>
+                      <th>Link HQ</th>
+                    </tr>
+                    <tr>
+                      <td>Emil</td>
+                      <td>Tobias</td>
+                      <td>Linus</td>
+                    </tr>
+                  </table>
+            </div>
+        </div>
+    </section>
+</div>
