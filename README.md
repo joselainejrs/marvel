@@ -16,7 +16,7 @@ $ @angular "~13.2.0"
 
 ####  Execute o aplicativo
 ```
-$ npm run start
+$ npm run start ou ng serve
 ```
 ####  Execute as dependências
 ```
