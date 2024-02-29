@@ -33,7 +33,7 @@ A parte principal do projeto é a listagem, detalhamento dos `HQ’s da Marvel`,
 
 ### Porque desenvolver esse projeto?
 
-A ideia de codar um projeto com tudo que eu aprendo e aprendi começou há algum tempo, inicialmente ele foi elaborado por mim, para um programa de formação na empresa onde trabalhava, gostei bastante da ideia e resolvi codar e incluir mais detalhes para o projeto. Foi feito algumas mudanças no protótipo inicial, está valendo cada momento.
+A ideia de codar um projeto com tudo que eu aprendo e aprendi começou há algum tempo, inicialmente ele foi elaborado por mim em um programa de formação na empresa onde eu trabalhava com intuito dos estagiarios aprenderem sobre o mundo do frontEnd, gostei bastante da ideia e resolvi codar e incluir mais alguns detalhes para o projeto e está valendo cada momento poder codar e aprender mais.
 
 ### Mas afinal o que é esse projeto?
 
