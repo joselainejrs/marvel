@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
-import { AccessService } from 'src/app/service/pages/access/access.service';
+import { AccessStorageService } from 'src/app/service/pages/access/access-storage.service';
 
 @Component({
   selector: 'app-login',
@@ -23,7 +23,7 @@ export class LoginComponent implements OnInit {
   constructor(
     private router: Router,
     private formBuilder: FormBuilder,
-    private accessService: AccessService
+    private accessStorageService: AccessStorageService
   ) { }
 
   get nickname() { return this.loginForm.get('nickname')?.value; }
@@ -31,17 +31,15 @@ export class LoginComponent implements OnInit {
 
 
   ngOnInit(): void { 
-    this.accessService.setNickname(this.nickname);
     window.scrollTo(0, 0);
   }
 
   onSubmit() {
-    this.accessService.setNickname(this.nickname);
-
     let getUserData = JSON.parse(localStorage.getItem('profiles') || '');
-
-    getUserData.forEach((element: { nickName: string | null; password: string | null; }) => {
+    
+    getUserData.forEach((element: any) => {
       if (element.nickName == this.nickname && element.password == this.password) {
+        this.accessStorageService.setUserId(element.id);
         this.router.navigate(['/comic/hqlist']);
       }else{
         console.log('entrou')

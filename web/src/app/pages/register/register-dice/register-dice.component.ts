@@ -29,7 +29,6 @@ export class RegisterDiceComponent implements OnInit {
     password: ['', Validators.required],
   });
 
-
   ngOnInit(): void {window.scrollTo(0, 0);}
 
   onSubmit() { this.handleData();}
@@ -43,7 +42,7 @@ export class RegisterDiceComponent implements OnInit {
       check: this.registerForm.get('check')?.value,
       password: this.registerForm.get('password')?.value,
     }
-     this.registerService.setDice(setFormDice);
+     this.registerService.setDataNew(setFormDice);
      this.router.navigate(['/register/address']);    
   }
 

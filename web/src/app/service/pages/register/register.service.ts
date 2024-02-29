@@ -11,19 +11,19 @@ import { RegisterStorageService } from './register-storage.service';
 export class RegisterService implements OnInit {
   profiles: any = [];
   id: any;
-  nickName = '';
-  firstName = '';
-  lastName = '';
-  email = '';
-  contact = '';
-  check = '';
-  password = '';
-  cep = '';
-  address = '';
-  no = '';
-  complement = '';
-  district = '';
-  city = '';
+  // nickName = '';
+  // firstName = '';
+  // lastName = '';
+  // email = '';
+  // contact = '';
+  // check = '';
+  // password = '';
+  // cep = '';
+  // address = '';
+  // no = '';
+  // complement = '';
+  // district = '';
+  // city = '';
 
   constructor(
     private http: HttpClient,
@@ -36,24 +36,24 @@ export class RegisterService implements OnInit {
     return this.http.get(`https://viacep.com.br/ws/${cep}/json`);
   }
 
-  setDice(Dice: any) {
-    this.nickName = Dice.nickName;
-    this.email = Dice.email;
-    this.contact = Dice.contact;
-    this.check = Dice.check;
-    this.password = Dice.password;
-  }
+  // setDice(Dice: any) {
+  //   this.nickName = Dice.nickName;
+  //   this.email = Dice.email;
+  //   this.contact = Dice.contact;
+  //   this.check = Dice.check;
+  //   this.password = Dice.password;
+  // }
 
-  setAddress(Dice: any) {
-    this.cep = Dice.cep;
-    this.address = Dice.address;
-    this.no = Dice.no;
-    this.complement = Dice.complement;
-    this.district = Dice.district;
-    this.city = Dice.city;
-  }
+  // setAddress(Dice: any) {
+  //   this.cep = Dice.cep;
+  //   this.address = Dice.address;
+  //   this.no = Dice.no;
+  //   this.complement = Dice.complement;
+  //   this.district = Dice.district;
+  //   this.city = Dice.city;
+  // }
 
-  setDataNew() {
+  setDataNew(Dice: any) {
     if (localStorage.hasOwnProperty('profile')) {
       this.profiles = localStorage.getItem("profile");
       JSON.parse(this.profiles);
@@ -61,17 +61,17 @@ export class RegisterService implements OnInit {
 
     const profileNew: IDice = {
       id: this.id = Guid.create().toString(),
-      nickName: this.nickName,
-      email: this.email,
-      contact: this.contact,
-      check: this.check,
-      password: this.password,
-      cep: this.cep,
-      address: this.address,
-      no: this.no,
-      complement: this.complement,
-      district: this.district,
-      city: this.city
+      nickName: Dice.nickName,
+      email: Dice.email,
+      contact: Dice.contact,
+      check: Dice.check,
+      password: Dice.password,
+      cep: Dice.cep,
+      address: Dice.address,
+      no: Dice.no,
+      complement: Dice.complement,
+      district: Dice.district,
+      city: Dice.city
     };
 
     this.profiles.push(profileNew)

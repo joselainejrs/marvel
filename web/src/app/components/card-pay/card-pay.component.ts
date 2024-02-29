@@ -29,7 +29,7 @@ export class CardPayComponent implements OnInit {
     console.log('entrou')
     this.openModalAction = false;
   }
-
+  
   priceId(){
     setTimeout(() => {
       this.price = this.apiMarvelStorageService.getPriceCharacter();

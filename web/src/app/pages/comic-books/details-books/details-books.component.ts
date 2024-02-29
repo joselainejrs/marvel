@@ -33,18 +33,34 @@ export class DetailsBooksComponent implements OnInit {
     this.activatedRoute.params.subscribe((params: any) => {
       this.apiMarvelservice.getCharacteresId(params.id).subscribe({
         next: (resp) => {
-          this.IdCharacters = resp
-          const date = this.IdCharacters[0].dates;
-          const creators = this.IdCharacters[0].creators.items;
-          const price = this.IdCharacters[0].prices;
-
-          this.treatmentDate(date);
-          this.pricesCharacteres(price);
-          this.treatmentCreate(creators);
-
+          this.IdCharacters = resp;
+          this.apiMarvelStorageService.setHqPurchased(this.IdCharacters);
         },
         error: (error) => {
           console.log('erro ', error)
+        },
+        complete: () => {
+          const date = this.IdCharacters[0].dates;
+          const price = this.IdCharacters[0].prices;
+          const creators = this.IdCharacters[0].creators.items;
+
+          if (this.IdCharacters[0].creators.items.length == 0) {
+            // exibir modal - Esse card não contém as informações 
+            console.log("sem dados")
+          } else {
+            this.treatmentCreate(creators);
+          }
+
+
+          // if(this.IdCharacters[0].prices == 0){
+
+          //   // this.IdCharacters[0].prices = '2.99';
+          //   this.pricesCharacteres(2.99);
+          // }else{
+          this.pricesCharacteres(price);
+          // }
+
+          this.treatmentDate(date);
         }
       })
     })
@@ -54,7 +70,8 @@ export class DetailsBooksComponent implements OnInit {
     for (let index in date) {
       const element = date[index];
 
-      if (element.type === "digitalPurchaseDate") {
+      if (element.type == "digitalPurchaseDate") {
+        // element.type = "onsaleDate" || "focDate" || "unlimitedDate"
         let formatter = Intl.DateTimeFormat("en-US", {
           year: 'numeric',
           month: 'long',
@@ -99,16 +116,27 @@ export class DetailsBooksComponent implements OnInit {
 
   dateUndefined() {
     if (this.penciler === undefined) {
-      this.penciler = this.notDate;
+      this.penciler = this.Others
+      this.changeRole(this.penciler)
     }
     if (this.pencilerCover === undefined) {
-      this.pencilerCover = this.notDate;
+      this.pencilerCover = this.Others
+      this.changeRole(this.pencilerCover)
     }
     if (this.writer === undefined) {
-      this.writer = this.notDate;
+      this.writer = this.Others
+      this.changeRole(this.writer)
     }
     if (this.Others === undefined) {
-      this.Others = this.notDate
+      this.Others = 'Stan Lee'
+    }
+  }
+
+  changeRole(role: string) {
+    if (this.Others === undefined) {
+      role = 'Stan Lee';
+    } else {
+      role = this.Others;
     }
   }
 
@@ -117,8 +145,12 @@ export class DetailsBooksComponent implements OnInit {
       const value = currency[index];
 
       if (value.type === "printPrice") {
+        if (value.price == 0) {
+          value.price = 2.99
+        }
+
         this.formatValue = new Intl.NumberFormat('de-DE', { style: 'currency', currency: 'EUR' })
-        .format(value.price)
+          .format(value.price)
 
         return this.apiMarvelStorageService.setPriceCharacter(this.formatValue);
       }

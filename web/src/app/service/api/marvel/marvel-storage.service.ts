@@ -4,15 +4,25 @@ import { Injectable } from '@angular/core';
   providedIn: 'root'
 })
 export class MarvelStorageService {
-  price: any;
+  price: string;
+  hqPurchased: {};
   
   constructor() { }
 
-  setPriceCharacter(currency: any) {
+  setHqPurchased(hq: {}) {
+    this.hqPurchased = hq;
+  }
+
+  getHqPurchased(): any {
+    return this.price;    
+  }
+
+  setPriceCharacter(currency: string) {
     this.price = currency 
   }
 
-  getPriceCharacter(): any {
+  getPriceCharacter(): string {
     return this.price;    
   }
+  
 }

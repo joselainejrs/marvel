@@ -14,7 +14,7 @@ export interface IDice {
 }
 
 export interface IPayment {
-        // idData: string,
+        idUser: string,
         cardNumber: string,
         validity: string,
         cvv: string,

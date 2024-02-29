@@ -38,8 +38,6 @@ export class ModalPayComponent implements OnInit {
 
   btnContinue() {
     this.handleData();
-    this.paymentService.setDataPaymentNew();
-  
   }
 
   handleData() {
@@ -51,7 +49,8 @@ export class ModalPayComponent implements OnInit {
       cpf: this.registerPaymentForm.get('cpf')?.value,
     }
 
-    this.paymentService.setPayment(setPaymentDice);
+    // fazer verificação 
+    this.paymentService.setDataPaymentNew(setPaymentDice);
     this.openClosePay.emit();
   }
 

@@ -32,7 +32,6 @@ export class RegisterAddressComponent implements OnInit {
 
   onSubmit(): void {
     this.handleData();
-    this.registerService.setDataNew();
   }
 
   valueCep() {
@@ -74,7 +73,7 @@ export class RegisterAddressComponent implements OnInit {
       district: this.registerAddressForm.get('district')?.value,
       city: this.registerAddressForm.get('city')?.value,
     }
-    this.registerService.setAddress(setFormAddress);
+    this.registerService.setDataNew(setFormAddress);
     this.router.navigate(['login']);
   }
 }
