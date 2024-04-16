@@ -11,8 +11,9 @@ Um projeto evolutivo para o meu aprendizado no mundo da programação WEB
 #### Web
 ```
 $ npm install -g @angular/cli
-$ @angular "~13.2.0"
 ```
+
+Versão do angular : $ @angular "~13.2.0"
 
 ####  Execute o aplicativo
 ```
