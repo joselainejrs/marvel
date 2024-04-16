@@ -41,6 +41,8 @@ O protótipo tem como proposta consumir API da Marvel. Mas não fica só por ai,
 
 ### Projeto Elaborado
 
+Link do figma : https://www.figma.com/proto/s8yhZfFJ5cskPPqov3yuRw/Case---Projeto-de-forma%C3%A7%C3%A3o?type=design&node-id=1802-3&t=lsrpVrpGWke7dz9Q-0&scaling=min-zoom&page-id=6%3A397
+
 
 <h4 align="center">
 Projeto desenvolvido por: Joselaine Romão Soares
