@@ -3,7 +3,7 @@
 </p>
 
 <h4 align="center">
-Um projeto evolutivo para o meu aprendizado no mundo da programação WEB
+Um projeto evolutivo para o meu aprendizado no mundo da programação
 </h4>
 
 ## Instalação
@@ -17,11 +17,16 @@ Versão do angular : $ @angular "~13.2.0"
 
 ####  Execute o aplicativo
 ```
-$ npm run start ou ng serve
+$ ng serve
+```
+```
+$ npm run start
 ```
 ####  Execute as dependências
 ```
 $ npm i guid-typescript --save
+```
+```
 $ npm install --save ngx-mask
 ```
 ## Descrição do projeto
