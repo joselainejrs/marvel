@@ -3,7 +3,7 @@
 </p>
 
 <h4 align="center">
-Um projeto evolutivo para o meu aprendizado no mundo da programação WEB
+Um projeto evolutivo para o meu aprendizado no mundo da programação
 </h4>
 
 ## Instalação
@@ -11,16 +11,22 @@ Um projeto evolutivo para o meu aprendizado no mundo da programação WEB
 #### Web
 ```
 $ npm install -g @angular/cli
-$ @angular "~13.2.0"
 ```
+
+Versão do angular : $ @angular "~13.2.0"
 
 ####  Execute o aplicativo
 ```
-$ npm run start ou ng serve
+$ ng serve
+```
+```
+$ npm run start
 ```
 ####  Execute as dependências
 ```
 $ npm i guid-typescript --save
+```
+```
 $ npm install --save ngx-mask
 ```
 ## Descrição do projeto
@@ -40,6 +46,8 @@ A ideia de codar um projeto com tudo que eu aprendo e aprendi começou há algum
 O protótipo tem como proposta consumir API da Marvel. Mas não fica só por ai, o protótipo foi desenhado com jornada de cadastro, login, forma de "pagamento por cartão" o usuário já cadastrado pode visualizar as hqs disponíveis e compra-las, pode ver as compras feitas e editar os seus dados no seu perfil de usuário.
 
 ### Projeto Elaborado
+
+Link do figma : https://www.figma.com/proto/s8yhZfFJ5cskPPqov3yuRw/Case---Projeto-de-forma%C3%A7%C3%A3o?type=design&node-id=1802-3&t=lsrpVrpGWke7dz9Q-0&scaling=min-zoom&page-id=6%3A397
 
 
 <h4 align="center">
