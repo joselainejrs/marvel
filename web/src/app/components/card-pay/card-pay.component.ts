@@ -20,17 +20,17 @@ export class CardPayComponent implements OnInit {
     this.priceId();
   }
 
-  openModal(){
+  openModal(): void{
     console.log('abrir modal')
     this.openModalAction = true;
   }
 
-  closeModal(){
+  closeModal(): void{
     console.log('entrou')
     this.openModalAction = false;
   }
   
-  priceId(){
+  priceId(): void{
     setTimeout(() => {
       this.price = this.apiMarvelStorageService.getPriceCharacter();
     }, 1000);

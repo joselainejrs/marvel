@@ -50,16 +50,7 @@ export class DetailsBooksComponent implements OnInit {
           } else {
             this.treatmentCreate(creators);
           }
-
-
-          // if(this.IdCharacters[0].prices == 0){
-
-          //   // this.IdCharacters[0].prices = '2.99';
-          //   this.pricesCharacteres(2.99);
-          // }else{
           this.pricesCharacteres(price);
-          // }
-
           this.treatmentDate(date);
         }
       })
