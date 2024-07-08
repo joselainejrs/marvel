@@ -30,22 +30,22 @@ export class AccessStorageService {
     this.password = password;
   }
 
-  getPublicKey(): string {
+  getMarvelPublicKey(): string {
     this.publicKey =  JSON.parse(localStorage.getItem('marvelPublicKey') || '{}')
     return this.publicKey;
   }
 
-  setPublicKey(publicKey: string): void {
+  setMarvelPublicKey(publicKey: string): void {
     this.publicKey = publicKey
     localStorage.setItem('marvelPublicKey', JSON.stringify(this.publicKey));
   }
 
-  getHash(): string {
+  getMarvelHash(): string {
     this.hash =  JSON.parse(localStorage.getItem('MarvelHash') || '{}')
     return this.hash;
   }
 
-  setHash(hash: string): void {
+  setMarvelHash(hash: string): void {
     this.hash = hash
     localStorage.setItem('MarvelHash', JSON.stringify(this.hash));
   }

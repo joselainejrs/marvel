@@ -40,9 +40,8 @@ export class LoginComponent implements OnInit {
   leadMarvelkey(): void {
     this.accessService.getMarvelKeyAccess().subscribe({
       next: (data) => {
-        console.log(data)
-        this.accessStorageService.setPublicKey(data.public_key);
-        this.accessStorageService.setHash(data.hash);
+        this.accessStorageService.setMarvelPublicKey(data.public_key);
+        this.accessStorageService.setMarvelHash(data.hash);
       },
       error: (error) => {
         console.log('O acesso a Key é restrito', error)
