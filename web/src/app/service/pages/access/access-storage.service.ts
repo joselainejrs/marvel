@@ -6,7 +6,9 @@ import { Injectable } from '@angular/core';
 
 export class AccessStorageService {
   private id: string;
+  private hash: string;
   private password: string;
+  private publicKey: string;
 
   constructor() { }
 
@@ -26,6 +28,26 @@ export class AccessStorageService {
 
   setPassword(password: string): void {
     this.password = password;
+  }
+
+  getPublicKey(): string {
+    this.publicKey =  JSON.parse(localStorage.getItem('marvelPublicKey') || '{}')
+    return this.publicKey;
+  }
+
+  setPublicKey(publicKey: string): void {
+    this.publicKey = publicKey
+    localStorage.setItem('marvelPublicKey', JSON.stringify(this.publicKey));
+  }
+
+  getHash(): string {
+    this.hash =  JSON.parse(localStorage.getItem('MarvelHash') || '{}')
+    return this.hash;
+  }
+
+  setHash(hash: string): void {
+    this.hash = hash
+    localStorage.setItem('MarvelHash', JSON.stringify(this.hash));
   }
 
 }

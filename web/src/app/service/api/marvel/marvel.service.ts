@@ -1,32 +1,35 @@
 import { HttpClient } from '@angular/common/http';
-import { Injectable } from '@angular/core';
+import { Injectable, OnInit } from '@angular/core';
 import { Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
 import { IMarvelHQS } from 'src/app/interfaces/marvel';
-import { apiMarvel } from 'src/environments/env';
+import { environment } from 'src/environments/environment';
+import { AccessService } from '../../pages/access/access.service';
+import { AccessStorageService } from '../../pages/access/access-storage.service';
 
 
 @Injectable({
   providedIn: 'root'
 })
 export class MarvelService {
-  publickKey = apiMarvel.publickKey;
-  hash = apiMarvel.hash;
-  baseUrl = apiMarvel.baseUrl
+  publicKey = this.accessStorageService.getPublicKey();
+  hash = this.accessStorageService.getHash();
 
-  constructor(private http: HttpClient) { }
 
-  //metodo para conectar com a marvel
-  //operador = mapp
+  constructor(
+    private http: HttpClient,
+    private accessStorageService: AccessStorageService
+  ) { }
+
 
   getCharacteres(): Observable<IMarvelHQS> {
-    const params = `comics?ts=1&apikey=${this.publickKey}&hash=${this.hash}`;
-    return this.http.get(this.baseUrl + params).pipe(map((data: any) => data.data.results))
+    const params = `comics?ts=1&apikey=${this.publicKey}&hash=${this.hash}`;
+    return this.http.get(environment.baseUrl + params).pipe(map((data: any) => data.data.results))
   }
 
   getCharacteresId(id: number): Observable<IMarvelHQS> {
-    const paramsId = `comics/${id}?ts=1&apikey=${this.publickKey}&hash=${this.hash}`;
-    return this.http.get(this.baseUrl + paramsId).pipe(map((data: any) => data.data.results))
+    const paramsId = `comics/${id}?ts=1&apikey=${this.publicKey}&hash=${this.hash}`;
+    return this.http.get(environment.baseUrl + paramsId).pipe(map((data: any) => data.data.results))
   }
 
 }
