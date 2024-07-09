@@ -12,8 +12,8 @@ import { AccessStorageService } from '../../pages/access/access-storage.service'
   providedIn: 'root'
 })
 export class MarvelService {
-  publicKey = this.accessStorageService.getPublicKey();
-  hash = this.accessStorageService.getHash();
+  publicKey = this.accessStorageService.getMarvelPublicKey();
+  hash = this.accessStorageService.getMarvelHash();
 
 
   constructor(
