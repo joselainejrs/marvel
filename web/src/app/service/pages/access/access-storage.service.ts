@@ -41,13 +41,13 @@ export class AccessStorageService {
   }
 
   getMarvelHash(): string {
-    this.hash =  JSON.parse(localStorage.getItem('MarvelHash') || '{}')
+    this.hash =  JSON.parse(localStorage.getItem('marvelHash') || '{}')
     return this.hash;
   }
 
   setMarvelHash(hash: string): void {
     this.hash = hash
-    localStorage.setItem('MarvelHash', JSON.stringify(this.hash));
+    localStorage.setItem('marvelHash', JSON.stringify(this.hash));
   }
 
 }
