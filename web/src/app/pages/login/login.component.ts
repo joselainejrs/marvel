@@ -38,6 +38,9 @@ export class LoginComponent implements OnInit {
   }
 
   leadMarvelkey(): void {
+    JSON.parse(localStorage.getItem('marvelPublicKey') || '');
+    JSON.parse(localStorage.getItem('marvelHash') || '');
+
     this.accessService.getMarvelKeyAccess().subscribe({
       next: (data) => {
         this.accessStorageService.setMarvelPublicKey(data.public_key);
